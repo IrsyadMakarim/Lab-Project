@@ -3,8 +3,6 @@ extends Node
 var player
 var player2
 var world
-var pasar = false setget set_pasar
-var level2 = false
 var item = 0 setget set_item
 var max_item = 7
 var pos = Vector2(168,96)
@@ -13,11 +11,6 @@ var clearlocation = Vector2(180,180)
 var current_scene = null
 
 signal item_changed(value)
-signal pasar_changed(value)
-
-func set_pasar(value):
-	pasar = value
-	emit_signal("pasar_changed", pasar)
 
 func set_item(value):
 	item = value
