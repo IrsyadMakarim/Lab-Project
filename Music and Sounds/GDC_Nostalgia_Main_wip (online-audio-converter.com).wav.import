@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GDC_Nostalgia_Main_wip (online-audio-converter.com).wav-bc368fe4a61acce9f56a56d49e8c5fb0.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/GDC_Nostalgia_Main_wip (online-audio-converter.com).wav"
+dest_files=[ "res://.import/GDC_Nostalgia_Main_wip (online-audio-converter.com).wav-bc368fe4a61acce9f56a56d49e8c5fb0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=true
+compress/mode=0

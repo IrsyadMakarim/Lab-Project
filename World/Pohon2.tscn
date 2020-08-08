@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/pohon.png-01c73506f4a7a0f03e890e64997dcabf.stex"
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 3.23288
+height = 4.32241
+
+[node name="Pohon" type="StaticBody2D"]
+
+[node name="pohon" type="Sprite" parent="."]
+position = Vector2( -0.82589, -11.3265 )
+scale = Vector2( 0.406553, 0.43581 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

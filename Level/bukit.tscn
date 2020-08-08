@@ -1,0 +1,468 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
+[ext_resource path="res://World/Water Tileset 500.png" type="Texture" id=3]
+[ext_resource path="res://World/Tileset template 500.png" type="Texture" id=4]
+[ext_resource path="res://World/pohon.png" type="Texture" id=5]
+[ext_resource path="res://World/layangan.png" type="Texture" id=6]
+[ext_resource path="res://World/Gubuk.png" type="Texture" id=7]
+[ext_resource path="res://World/kakek kakek.png" type="Texture" id=8]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Water Tileset 500.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 224, 96, 96, 96 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 292, Vector2( 0, 2 ), 4, Vector2( 1, 0 ), 448, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 7, Vector2( 2, 0 ), 64, Vector2( 2, 1 ), 73, Vector2( 2, 2 ), 1 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "Tileset template 500.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 224, 96, 96, 96 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 292, Vector2( 0, 2 ), 4, Vector2( 1, 0 ), 448, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 7, Vector2( 2, 0 ), 64, Vector2( 2, 1 ), 73, Vector2( 2, 2 ), 1 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1268, 1185 )
+
+[node name="TileMapWater" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 29, 0, 65537, 30, 0, 65537, 31, 0, 65537, 65565, 0, 65537, 65566, 0, 65537, 65567, 0, 65537, 131101, 0, 65537, 131102, 0, 65537, 131103, 0, 65537, 196637, 0, 65537, 196638, 0, 65537, 196639, 0, 65537, 393245, 0, 65537, 393246, 0, 65537, 393247, 0, 65537, 458781, 0, 65537, 458782, 0, 65537, 458783, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65537, 524320, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65537, 589856, 0, 65537, 589857, 0, 65537, 655389, 0, 65537, 655390, 0, 65537, 655391, 0, 65537, 655392, 0, 65537, 655393, 0, 65537, 720926, 0, 65537, 720927, 0, 65537, 720928, 0, 65537, 720929, 0, 65537, 720930, 0, 65537, 786463, 0, 65537, 786464, 0, 65537, 786465, 0, 65537, 786466, 0, 65537, 786467, 0, 65537, 786468, 0, 65537, 786469, 0, 65537, 786470, 0, 65537, 786471, 0, 65537, 852000, 0, 65537, 852001, 0, 65537, 852002, 0, 65537, 852003, 0, 65537, 852004, 0, 65537, 852005, 0, 65537, 852006, 0, 65537, 852007, 0, 65537, 917538, 0, 65537, 917539, 0, 65537, 917540, 0, 65537, 917541, 0, 65537, 917542, 0, 65537, 917543, 0, 65537 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player2" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 161.011, 1139.3 )
+
+[node name="pohon" type="Sprite" parent="YSort"]
+position = Vector2( 38.1131, 54.192 )
+texture = ExtResource( 5 )
+
+[node name="Gubuk" type="Sprite" parent="YSort"]
+position = Vector2( 126.777, 738.878 )
+scale = Vector2( 0.285042, 0.33899 )
+texture = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="YSort"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131099, 0, 65537, 196628, 0, 65537, 196634, 0, 65537, 196635, 0, 65537, 196636, 0, 65537, 262148, 0, 65537, 262149, 0, 65537, 262163, 0, 65537, 262169, 0, 65537, 262170, 0, 65537, 262171, 0, 65537, 262172, 0, 65537, 262173, 0, 65537, 262174, 0, 65537, 262175, 0, 65537, 262176, 0, 65537, 262177, 0, 65537, 262178, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65537, 327699, 0, 65537, 327700, 0, 65537, 327706, 0, 65537, 327707, 0, 65537, 327708, 0, 65537, 327709, 0, 65537, 327710, 0, 65537, 327711, 0, 65537, 327712, 0, 65537, 327713, 0, 65537, 327714, 0, 65537, 393219, 0, 65537, 393220, 0, 65537, 393221, 0, 65537, 393222, 0, 65537, 393229, 0, 65537, 393230, 0, 65537, 393231, 0, 65537, 393232, 0, 65537, 393233, 0, 65537, 393234, 0, 65537, 393235, 0, 65537, 393236, 0, 65537, 393241, 0, 65537, 393242, 0, 65537, 393248, 0, 65537, 393249, 0, 65537, 393252, 0, 65537, 458755, 0, 65537, 458757, 0, 65537, 458758, 0, 65537, 458764, 0, 65537, 458765, 0, 65537, 458766, 0, 65537, 458767, 0, 65537, 458769, 0, 65537, 458770, 0, 65537, 458771, 0, 65537, 458772, 0, 65537, 458776, 0, 65537, 458777, 0, 65537, 458778, 0, 65537, 524291, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524307, 0, 65537, 524308, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589843, 0, 65537, 589860, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655372, 0, 65537, 655373, 0, 65537, 655379, 0, 65537, 655380, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 786435, 0, 65537, 786436, 0, 65537, 786437, 0, 65537, 786444, 0, 65537, 786445, 0, 65537, 851971, 0, 65537, 851972, 0, 65537, 851973, 0, 65537, 851974, 0, 65537, 851980, 0, 65537, 851981, 0, 65537, 851995, 0, 65537, 851996, 0, 65537, 851998, 0, 65537, 917507, 0, 65537, 917508, 0, 65537, 917509, 0, 65537, 917510, 0, 65537, 917516, 0, 65537, 917517, 0, 65537, 917518, 0, 65537, 917519, 0, 65537, 917520, 0, 65537, 917522, 0, 65537, 917523, 0, 65537, 917524, 0, 65537, 917525, 0, 65537, 917526, 0, 65537, 917530, 0, 65537, 917531, 0, 65537, 917532, 0, 65537, 917533, 0, 65537, 917534, 0, 65537, 917535, 0, 65537, 983043, 0, 65537, 983044, 0, 65537, 983045, 0, 65537, 983052, 0, 65537, 983053, 0, 65537, 983054, 0, 65537, 983055, 0, 65537, 983056, 0, 65537, 983057, 0, 65537, 983058, 0, 65537, 983059, 0, 65537, 983060, 0, 65537, 983061, 0, 65537, 983062, 0, 65537, 983067, 0, 65537, 983068, 0, 65537, 983069, 0, 65537, 983070, 0, 65537, 983071, 0, 65537, 983072, 0, 65537, 1048580, 0, 65537, 1048581, 0, 65537, 1048588, 0, 65537, 1048589, 0, 65537, 1048597, 0, 65537, 1048598, 0, 65537, 1048604, 0, 65537, 1048605, 0, 65537, 1114115, 0, 65537, 1114116, 0, 65537, 1114117, 0, 65537, 1114124, 0, 65537, 1114133, 0, 65537, 1114134, 0, 65537, 1114140, 0, 65537, 1114141, 0, 65537, 1179651, 0, 65537, 1179652, 0, 65537, 1179654, 0, 65537, 1179660, 0, 65537, 1179661, 0, 65537, 1179669, 0, 65537, 1179676, 0, 65537, 1179677, 0, 65537, 1245187, 0, 65537, 1245188, 0, 65537, 1245189, 0, 65537, 1245196, 0, 65537, 1245197, 0, 65537, 1245205, 0, 65537, 1245206, 0, 65537, 1245212, 0, 65537, 1245213, 0, 65537, 1310724, 0, 65537, 1310725, 0, 65537, 1310732, 0, 65537, 1310733, 0, 65537, 1310734, 0, 65537, 1310735, 0, 65537, 1310741, 0, 65537, 1310742, 0, 65537, 1310743, 0, 65537, 1310744, 0, 65537, 1310745, 0, 65537, 1310746, 0, 65537, 1310747, 0, 65537, 1310748, 0, 65537, 1310749, 0, 65537, 1376259, 0, 65537, 1376260, 0, 65537, 1376261, 0, 65537, 1376268, 0, 65537, 1376269, 0, 65537, 1376271, 0, 65537, 1376277, 0, 65537, 1376278, 0, 65537, 1376280, 0, 65537, 1376281, 0, 65537, 1376282, 0, 65537, 1376283, 0, 65537, 1376284, 0, 65537, 1441795, 0, 65537, 1441796, 0, 65537, 1441797, 0, 65537, 1441798, 0, 65537, 1441804, 0, 65537, 1441805, 0, 65537, 1441806, 0, 65537, 1441807, 0, 65537, 1441808, 0, 65537, 1441813, 0, 65537, 1441814, 0, 65537, 1507331, 0, 65537, 1507332, 0, 65537, 1507333, 0, 65537, 1507334, 0, 65537, 1507335, 0, 65537, 1507336, 0, 65537, 1507337, 0, 65537, 1507338, 0, 65537, 1507339, 0, 65537, 1507340, 0, 65537, 1507341, 0, 65537, 1507342, 0, 65537, 1507343, 0, 65537, 1507344, 0, 65537, 1507345, 0, 65537, 1507349, 0, 65537, 1507350, 0, 65537, 1572867, 0, 65537, 1572868, 0, 65537, 1572869, 0, 65537, 1572870, 0, 65537, 1572871, 0, 65537, 1572872, 0, 65537, 1572873, 0, 65537, 1572874, 0, 65537, 1572875, 0, 65537, 1572876, 0, 65537, 1572879, 0, 65537, 1572880, 0, 65537, 1572881, 0, 65537, 1572882, 0, 65537, 1572885, 0, 65537, 1572886, 0, 65537, 1638403, 0, 65537, 1638404, 0, 65537, 1638405, 0, 65537, 1638417, 0, 65537, 1638418, 0, 65537, 1638421, 0, 65537, 1638422, 0, 65537, 1703939, 0, 65537, 1703940, 0, 65537, 1703953, 0, 65537, 1703954, 0, 65537, 1703955, 0, 65537, 1703956, 0, 65537, 1703957, 0, 65537, 1703958, 0, 65537, 1769475, 0, 65537, 1769476, 0, 65537, 1769477, 0, 65537, 1769490, 0, 65537, 1769491, 0, 65537, 1769492, 0, 65537, 1769493, 0, 65537, 1835011, 0, 65537, 1835012, 0, 65537, 1835013, 0, 65537, 1835027, 0, 65537, 1835028, 0, 65537, 1900547, 0, 65537, 1900548, 0, 65537, 1900549, 0, 65537, 1900550, 0, 65537, 1900563, 0, 65537, 1900564, 0, 65537, 1966084, 0, 65537, 1966085, 0, 65537, 1966099, 0, 65537, 1966100, 0, 65537, 2031620, 0, 65537, 2031621, 0, 65537, 2031633, 0, 65537, 2031635, 0, 65537, 2031636, 0, 65537, 2031637, 0, 65537, 2031638, 0, 65537, 2097155, 0, 65537, 2097156, 0, 65537, 2097157, 0, 65537, 2097169, 0, 65537, 2097170, 0, 65537, 2097172, 0, 65537, 2097173, 0, 65537, 2097174, 0, 65537, 2162691, 0, 65537, 2162692, 0, 65537, 2162693, 0, 65537, 2162694, 0, 65537, 2162705, 0, 65537, 2162706, 0, 65537, 2162707, 0, 65537, 2162708, 0, 65537, 2162709, 0, 65537, 2162711, 0, 65537, 2228227, 0, 65537, 2228228, 0, 65537, 2228229, 0, 65537, 2228230, 0, 65537, 2293763, 0, 65537, 2293764, 0, 65537, 2293765, 0, 65537, 2293766, 0, 65537, 2359299, 0, 65537, 2359300, 0, 65537, 2359301, 0, 65537, 2359302, 0, 65537, 2359303, 0, 65537 )
+
+[node name="kakek kakek" type="Sprite" parent="YSort"]
+position = Vector2( 185.74, 752.663 )
+scale = Vector2( 0.326, 0.326 )
+texture = ExtResource( 8 )
+
+[node name="pohon" type="Sprite" parent="."]
+position = Vector2( 36.7371, 144.814 )
+texture = ExtResource( 5 )
+
+[node name="pohon" type="Sprite" parent="pohon"]
+position = Vector2( 1.37048, 90.5886 )
+texture = ExtResource( 5 )
+
+[node name="pohon" type="Sprite" parent="pohon/pohon"]
+position = Vector2( 0, 79.0443 )
+texture = ExtResource( 5 )
+
+[node name="pohon" type="Sprite" parent="pohon/pohon/pohon"]
+position = Vector2( -3.36359, 84.0897 )
+texture = ExtResource( 5 )
+
+[node name="pohon" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1.68179, 84.0897 )
+texture = ExtResource( 5 )
+
+[node name="pohon2" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 3.36359, 179.952 )
+texture = ExtResource( 5 )
+
+[node name="pohon3" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 5.04538, 274.132 )
+texture = ExtResource( 5 )
+
+[node name="pohon4" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 75.6807, -343.086 )
+texture = ExtResource( 5 )
+
+[node name="pohon5" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 149.68, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon6" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 228.724, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon7" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 232.087, -253.951 )
+texture = ExtResource( 5 )
+
+[node name="pohon8" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 233.769, -163.134 )
+texture = ExtResource( 5 )
+
+[node name="pohon9" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 230.406, -77.3625 )
+texture = ExtResource( 5 )
+
+[node name="pohon10" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 301.041, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon11" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 302.723, -253.951 )
+texture = ExtResource( 5 )
+
+[node name="pohon12" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 306.086, -161.452 )
+texture = ExtResource( 5 )
+
+[node name="pohon13" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 306.086, -79.0443 )
+texture = ExtResource( 5 )
+
+[node name="pohon14" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 375.04, -343.086 )
+texture = ExtResource( 5 )
+
+[node name="pohon15" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 449.039, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon16" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 521.356, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon17" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 373.358, -252.269 )
+texture = ExtResource( 5 )
+
+[node name="pohon18" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 450.721, -252.269 )
+texture = ExtResource( 5 )
+
+[node name="pohon19" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 526.401, -250.587 )
+texture = ExtResource( 5 )
+
+[node name="pohon20" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 593.673, -344.768 )
+texture = ExtResource( 5 )
+
+[node name="pohon21" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 669.354, -343.086 )
+texture = ExtResource( 5 )
+
+[node name="pohon22" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 672.717, -253.951 )
+texture = ExtResource( 5 )
+
+[node name="pohon23" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 676.081, -169.861 )
+texture = ExtResource( 5 )
+
+[node name="pohon24" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 677.763, -84.0896 )
+texture = ExtResource( 5 )
+
+[node name="pohon25" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 450.721, -80.726 )
+texture = ExtResource( 5 )
+
+[node name="pohon26" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 524.719, -80.726 )
+texture = ExtResource( 5 )
+
+[node name="pohon27" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 450.721, 1.68176 )
+texture = ExtResource( 5 )
+
+[node name="pohon28" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 526.401, 5.04535 )
+texture = ExtResource( 5 )
+
+[node name="pohon29" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 598.718, 3.36359 )
+texture = ExtResource( 5 )
+
+[node name="pohon30" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 672.717, 1.68176 )
+texture = ExtResource( 5 )
+
+[node name="pohon31" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 745.034, 1.68176 )
+texture = ExtResource( 5 )
+
+[node name="pohon32" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 746.716, 89.135 )
+texture = ExtResource( 5 )
+
+[node name="pohon33" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 746.716, 174.906 )
+texture = ExtResource( 5 )
+
+[node name="pohon34" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 823.068, 173.866 )
+texture = ExtResource( 5 )
+
+[node name="pohon35" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 454.235, 182.775 )
+texture = ExtResource( 5 )
+
+[node name="pohon36" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 532.635, 182.775 )
+texture = ExtResource( 5 )
+
+[node name="pohon37" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 534.416, 273.647 )
+texture = ExtResource( 5 )
+
+[node name="pohon38" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 609.421, 184.959 )
+texture = ExtResource( 5 )
+
+[node name="pohon39" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 609.421, 273.633 )
+texture = ExtResource( 5 )
+
+[node name="pohon40" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 611.309, 361.463 )
+texture = ExtResource( 5 )
+
+[node name="pohon41" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 750.721, 358.89 )
+texture = ExtResource( 5 )
+
+[node name="pohon42" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 823.823, 361.009 )
+texture = ExtResource( 5 )
+
+[node name="pohon43" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 894.85, 357.83 )
+texture = ExtResource( 5 )
+
+[node name="pohon44" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 966.893, 359.949 )
+texture = ExtResource( 5 )
+
+[node name="pohon45" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 969.012, 269.895 )
+texture = ExtResource( 5 )
+
+[node name="pohon46" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 970.071, 178.781 )
+texture = ExtResource( 5 )
+
+[node name="pohon47" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1045.29, 177.83 )
+texture = ExtResource( 5 )
+
+[node name="pohon48" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1116.28, 178.89 )
+texture = ExtResource( 5 )
+
+[node name="pohon49" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1185.14, 179.949 )
+texture = ExtResource( 5 )
+
+[node name="pohon50" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 304.525, 9.63412 )
+texture = ExtResource( 5 )
+
+[node name="pohon51" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 232.791, 11.5219 )
+texture = ExtResource( 5 )
+
+[node name="pohon52" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 306.413, 102.134 )
+texture = ExtResource( 5 )
+
+[node name="pohon53" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 305.036, 190.723 )
+texture = ExtResource( 5 )
+
+[node name="pohon54" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 301.256, 281.438 )
+texture = ExtResource( 5 )
+
+[node name="pohon55" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 305.036, 454.592 )
+texture = ExtResource( 5 )
+
+[node name="pohon56" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 376.851, 454.592 )
+texture = ExtResource( 5 )
+
+[node name="pohon57" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 452.447, 454.592 )
+texture = ExtResource( 5 )
+
+[node name="pohon58" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 453.706, 549.086 )
+texture = ExtResource( 5 )
+
+[node name="pohon59" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 233.22, 454.592 )
+texture = ExtResource( 5 )
+
+[node name="pohon60" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 230.7, 281.983 )
+texture = ExtResource( 5 )
+
+[node name="pohon61" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 233.22, 187.489 )
+texture = ExtResource( 5 )
+
+[node name="pohon62" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 231.96, 100.554 )
+texture = ExtResource( 5 )
+
+[node name="pohon63" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 754.851, 450.815 )
+texture = ExtResource( 5 )
+
+[node name="pohon64" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 756.265, 541.325 )
+texture = ExtResource( 5 )
+
+[node name="pohon65" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 759.093, 631.835 )
+texture = ExtResource( 5 )
+
+[node name="pohon66" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 760.508, 722.013 )
+texture = ExtResource( 5 )
+
+[node name="pohon67" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 681.126, 540.861 )
+texture = ExtResource( 5 )
+
+[node name="pohon68" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 530.097, 546.807 )
+texture = ExtResource( 5 )
+
+[node name="pohon69" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 452.798, 641.564 )
+texture = ExtResource( 5 )
+
+[node name="pohon70" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 451.609, 728.186 )
+texture = ExtResource( 5 )
+
+[node name="pohon71" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 528.908, 724.619 )
+texture = ExtResource( 5 )
+
+[node name="pohon72" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 607.395, 728.186 )
+texture = ExtResource( 5 )
+
+[node name="pohon73" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 683.505, 723.429 )
+texture = ExtResource( 5 )
+
+[node name="pohon74" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 233.738, 544.642 )
+texture = ExtResource( 5 )
+
+[node name="pohon75" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 235.325, 638.298 )
+texture = ExtResource( 5 )
+
+[node name="pohon76" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 238.5, 728.78 )
+texture = ExtResource( 5 )
+
+[node name="pohon77" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 3.33936, 365.527 )
+texture = ExtResource( 5 )
+
+[node name="pohon78" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 3.33936, 461.389 )
+texture = ExtResource( 5 )
+
+[node name="pohon79" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 3.33936, 553.888 )
+texture = ExtResource( 5 )
+
+[node name="pohon80" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 3.33936, 639.659 )
+texture = ExtResource( 5 )
+
+[node name="pohon81" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( -0.024231, 728.794 )
+texture = ExtResource( 5 )
+
+[node name="pohon82" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1189.43, -344.455 )
+texture = ExtResource( 5 )
+
+[node name="pohon83" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1189.43, -257.147 )
+texture = ExtResource( 5 )
+
+[node name="pohon84" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1193, -169.146 )
+texture = ExtResource( 5 )
+
+[node name="pohon85" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1194.19, -81.1443 )
+texture = ExtResource( 5 )
+
+[node name="pohon86" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1118.08, -345.148 )
+texture = ExtResource( 5 )
+
+[node name="pohon87" type="Sprite" parent="pohon/pohon/pohon/pohon"]
+position = Vector2( 1046.73, -343.959 )
+texture = ExtResource( 5 )
+
+[node name="layangan" type="Sprite" parent="."]
+position = Vector2( 1086.24, 144.389 )
+scale = Vector2( 0.685023, 0.68502 )
+texture = ExtResource( 6 )

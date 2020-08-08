@@ -1,0 +1,224 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DirtPathTileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Level/World.gd" type="Script" id=7]
+[ext_resource path="res://CliffTileMap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Tulupan.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Level/PasarArea.gd" type="Script" id=12]
+[ext_resource path="res://World/Bush.gd" type="Script" id=13]
+[ext_resource path="res://Level/Level2Area.gd" type="Script" id=15]
+[ext_resource path="res://Music and Sounds/GDC_Nostalgia_Main_wip (online-audio-converter.com).wav" type="AudioStream" id=19]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.23724
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 8.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 8.0
+height = 12.0
+
+[sub_resource type="Theme" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.368627, 0.368627, 0.368627, 1 )
+shadow_color = Color( 0.0823529, 0.0823529, 0.0823529, 0.6 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -0.33371, 0 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -16, -40, 320, 180 )
+
+[node name="DirtPathTileMap" parent="." instance=ExtResource( 3 )]
+
+[node name="CliffTileMap" parent="." instance=ExtResource( 8 )]
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 2, -65531, 0, 196608, -65530, 0, 196609, -65529, 0, 6, -65528, 0, 1, -65527, 0, 2, 65535, 0, 65540, 0, 0, 131073, 1, 0, 131073, 2, 0, 131073, 3, 0, 131074, 7, 0, 65536, 8, 0, 65537, 9, 0, 131077, 10, 0, 2, 131071, 0, 131075, 65543, 0, 131072, 65544, 0, 131073, 65545, 0, 131073, 65546, 0, 131074, 262143, 0, 3, 196617, 0, 0, 196618, 0, 2, 327679, 0, 131076, 262144, 0, 1, 262145, 0, 2, 262150, 0, 0, 262151, 0, 1, 262152, 0, 1, 262153, 0, 131078, 262154, 0, 65538, 393215, 0, 65536, 327680, 0, 65537, 327681, 0, 131077, 327682, 0, 1, 327683, 0, 2, 327686, 0, 65536, 327687, 0, 65537, 327688, 0, 65537, 327689, 0, 65537, 327690, 0, 65538, 458751, 0, 131072, 393216, 0, 131073, 393217, 0, 131073, 393218, 0, 131073, 393219, 0, 131074, 393222, 0, 131072, 393223, 0, 131073, 393224, 0, 131073, 393225, 0, 131073, 393226, 0, 131074 )
+
+[node name="TileMap" parent="." instance=ExtResource( 6 )]
+
+[node name="PasarArea" type="Area2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="CollisionPasar" type="CollisionShape2D" parent="PasarArea"]
+position = Vector2( -12.2519, 78.5328 )
+shape = SubResource( 1 )
+
+[node name="Level2Area" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="CollisionLevel2" type="CollisionShape2D" parent="Level2Area"]
+position = Vector2( 326.01, 80 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 2 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Tulupan" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 83.4877, 41.5626 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 157, 96 )
+
+[node name="Camera2D2" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180
+
+[node name="Player2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 55.7764, 68.0381 )
+
+[node name="Bushes" type="YSort" parent="YSort"]
+
+[node name="Bush" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 248, 136 )
+
+[node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 32, 40 )
+
+[node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 8, 40 )
+
+[node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 56, 40 )
+
+[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 200, 72 )
+
+[node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 248, 40 )
+
+[node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 120, 104 )
+
+[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 224, 72 )
+
+[node name="Bush9" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 176, 72 )
+
+[node name="Bush10" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 13.3514, 115 )
+
+[node name="Bush11" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 120, 152 )
+
+[node name="Bush12" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 120, 136 )
+
+[node name="Bush13" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 120, 120 )
+
+[node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 312, 120 )
+
+[node name="Bush15" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 208, 168 )
+
+[node name="Bush16" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 99.8961, 7.2063 )
+
+[node name="Bush17" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 296, 152 )
+
+[node name="Bush19" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 140.046, 8.44091 )
+script = ExtResource( 13 )
+
+[node name="Bush18" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 164.073, 8.44091 )
+script = ExtResource( 13 )
+
+[node name="Bush20" parent="YSort/Bushes" instance=ExtResource( 4 )]
+position = Vector2( 185.818, 9.21542 )
+script = ExtResource( 13 )
+
+[node name="Pohonan" type="YSort" parent="YSort"]
+
+[node name="Pohon" parent="YSort/Pohonan" instance=ExtResource( 2 )]
+position = Vector2( 272, 32 )
+
+[node name="Pohon2" parent="YSort/Pohonan" instance=ExtResource( 2 )]
+position = Vector2( 304, 32 )
+
+[node name="Pohon3" parent="YSort/Pohonan" instance=ExtResource( 2 )]
+position = Vector2( 40, 160 )
+
+[node name="Pohon4" parent="YSort/Pohonan" instance=ExtResource( 2 )]
+position = Vector2( 200, 48 )
+
+[node name="Pohon5" parent="YSort/Pohonan" instance=ExtResource( 2 )]
+position = Vector2( 216, 16 )
+
+[node name="AreaDialog" type="Area2D" parent="."]
+
+[node name="CollisionDialog" type="CollisionShape2D" parent="AreaDialog"]
+position = Vector2( 80, 128 )
+shape = SubResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+modulate = Color( 0.956863, 0.905882, 0.905882, 1 )
+self_modulate = Color( 0.972549, 0.956863, 0.956863, 1 )
+margin_left = 40.0
+margin_top = 104.0
+margin_right = 128.0
+margin_bottom = 136.0
+theme = SubResource( 4 )
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" type="RichTextLabel" parent="Panel"]
+modulate = Color( 0.976471, 0.964706, 0.964706, 1 )
+self_modulate = Color( 0.960784, 0.960784, 0.960784, 1 )
+margin_right = 88.0
+margin_bottom = 32.0
+text = "Halo, saya adalah irsyad"
+scroll_active = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tempat" type="Label" parent="CanvasLayer"]
+anchor_left = -0.00147476
+anchor_right = -0.00147476
+margin_left = 128.0
+margin_right = 209.0
+margin_bottom = 14.0
+text = "Lapangan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 19 )
+volume_db = 24.0
+autoplay = true
+max_distance = 3000.0
+area_mask = 3
+[connection signal="body_entered" from="PasarArea" to="PasarArea" method="_on_PasarArea_body_entered"]
+[connection signal="body_exited" from="Level2Area" to="Level2Area" method="_on_Level2Area_body_exited"]
+[connection signal="body_entered" from="AreaDialog" to="." method="_on_AreaDialog_body_entered"]
+[connection signal="body_exited" from="AreaDialog" to="." method="_on_AreaDialog_body_exited"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Script/MainanUI.gd" type="Script" id=1]
+
+[node name="MainanUI" type="Control"]
+margin_right = 75.0
+margin_bottom = 15.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "Mainan = 0 / 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}

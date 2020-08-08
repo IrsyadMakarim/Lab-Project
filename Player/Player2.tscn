@@ -1,0 +1,181 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://Script/InteractionComponentUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player2.gd" type="Script" id=2]
+[ext_resource path="res://Script/InteractionComponent.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/walk 1.png" type="Texture" id=7]
+[ext_resource path="res://Player/walk 3.png" type="Texture" id=8]
+[ext_resource path="res://Player/walk 4.png" type="Texture" id=9]
+[ext_resource path="res://Player/walk 2.png" type="Texture" id=10]
+[ext_resource path="res://Player/walking side 2.png" type="Texture" id=11]
+[ext_resource path="res://Player/walking side 3.png" type="Texture" id=12]
+[ext_resource path="res://Player/walking side 1.png" type="Texture" id=13]
+[ext_resource path="res://Player/walk back 4.png" type="Texture" id=14]
+[ext_resource path="res://Player/walk back 2.png" type="Texture" id=15]
+[ext_resource path="res://Player/walking side 5.png" type="Texture" id=16]
+[ext_resource path="res://Player/walking side 6.png" type="Texture" id=17]
+[ext_resource path="res://Player/walk back 1.png" type="Texture" id=18]
+[ext_resource path="res://Player/walk back 3.png" type="Texture" id=19]
+[ext_resource path="res://Player/walking side 4.png" type="Texture" id=20]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "WalkUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "WalkDown",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.15925
+height = 7.00441
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+loop = true
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+loop = true
+
+[sub_resource type="Animation" id=5]
+length = 0.1
+loop = true
+
+[sub_resource type="Animation" id=6]
+length = 0.1
+loop = true
+
+[sub_resource type="Animation" id=7]
+length = 0.1
+loop = true
+
+[sub_resource type="Animation" id=8]
+length = 0.3
+loop = true
+
+[sub_resource type="Animation" id=9]
+length = 0.3
+loop = true
+
+[sub_resource type="Animation" id=10]
+length = 0.4
+loop = true
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 11 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 12 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 14 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Left"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Right"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Forward"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "Up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 16 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 17 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 18 )
+blend_point_2/pos = Vector2( 0, 1.1 )
+blend_point_3/node = SubResource( 19 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/Afk/node = SubResource( 15 )
+states/Afk/position = Vector2( 457, 97 )
+states/Walk/node = SubResource( 20 )
+states/Walk/position = Vector2( 618, 97 )
+transitions = [ "Afk", "Walk", SubResource( 21 ), "Walk", "Afk", SubResource( 22 ) ]
+start_node = "Afk"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+
+[node name="Player2" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1.19209e-07, 0 )
+scale = Vector2( 0.970471, 0.798216 )
+frames = SubResource( 1 )
+animation = "WalkRight"
+
+[node name="InteractionComponent" parent="AnimatedSprite" instance=ExtResource( 3 )]
+interaction_parent = NodePath("../..")
+
+[node name="InteractionComponentUI" parent="." instance=ExtResource( 1 )]
+margin_top = -18.2013
+margin_bottom = -2.20129
+interaction_component_nodepath = NodePath("../AnimatedSprite/InteractionComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 7.91418 )
+rotation = -1.5708
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Forward = SubResource( 3 )
+anims/IdleDown = SubResource( 4 )
+anims/IdleLeft = SubResource( 5 )
+anims/IdleRight = SubResource( 6 )
+anims/IdleUp = SubResource( 7 )
+anims/Left = SubResource( 8 )
+anims/Right = SubResource( 9 )
+anims/Up = SubResource( 10 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 23 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 24 )
+parameters/Afk/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( -0.00156009, 1.1 )
