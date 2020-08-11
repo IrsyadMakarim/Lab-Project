@@ -21,6 +21,7 @@ radius = 4.23724
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.0
+height = 6.12152
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 8.0
@@ -53,7 +54,7 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -6
 script = ExtResource( 12 )
 
 [node name="CollisionPasar" type="CollisionShape2D" parent="PasarArea"]
-position = Vector2( -12.2519, 78.5328 )
+position = Vector2( -8.98158, 79.1274 )
 shape = SubResource( 1 )
 
 [node name="Level2Area" type="Area2D" parent="."]

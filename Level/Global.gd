@@ -8,7 +8,7 @@ var max_item = 7
 var pos = Vector2(168,96)
 var pos2 = Vector2(80,152)
 var clearlocation = Vector2(180,180)
-var current_scene = null
+#var current_scene = null
 
 signal item_changed(value)
 

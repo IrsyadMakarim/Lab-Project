@@ -1,4 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Button/ExitButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Button/ContinueButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Button/NewGameButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TitleScreen.gd" type="Script" id=5]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -7,18 +13,52 @@ margin_left = -0.793701
 margin_top = -0.86879
 margin_right = -0.793701
 margin_bottom = -0.86879
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="VBoxContainer" parent="."]
-margin_left = 20.0
+margin_left = 19.6464
 margin_top = 14.0
-margin_right = 301.0
+margin_right = 300.646
 margin_bottom = 169.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureRect" parent="Menu"]
+[node name="Logo" type="Label" parent="Menu"]
 margin_right = 281.0
+margin_bottom = 14.0
+text = "NOSTALGIA"
+align = 1
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 18.0
+margin_right = 281.0
+margin_bottom = 155.0
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_right = 281.0
+margin_bottom = 137.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+alignment = 1
+
+[node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
+margin_top = 3.0
+margin_bottom = 40.0
+
+[node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
+margin_top = 40.0
+margin_bottom = 96.0
+
+[node name="ExitButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
+margin_top = 96.0
+margin_bottom = 133.0
+
+[node name="FadeIn" parent="." instance=ExtResource( 4 )]
+visible = false
+[connection signal="pressed" from="Menu/CenterRow/Buttons/ExitButton" to="Menu/CenterRow/Buttons/ExitButton" method="_on_ExitButton_pressed"]
