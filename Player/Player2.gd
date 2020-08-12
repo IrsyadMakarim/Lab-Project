@@ -1,5 +1,5 @@
 extends KinematicBody2D
-#class_name Player
+class_name Player
 
 const ACCELERATION = 500
 const MAX_SPEED = 80

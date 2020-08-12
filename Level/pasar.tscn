@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://World/Nenek.tscn" type="PackedScene" id=10]
 [ext_resource path="res://CliffTileMap.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Level/pasar.gd" type="Script" id=12]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=15]
 
@@ -66,7 +65,7 @@
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 2.59793
-height = 21.9422
+height = 13.4056
 
 [node name="Pasar" type="Node2D"]
 script = ExtResource( 12 )
@@ -97,14 +96,8 @@ position = Vector2( 154.488, 29.7203 )
 position = Vector2( 257.808, 44.9773 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="RumahPasar" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 270.217, 17.6144 )
-
-[node name="Player" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 310.482, 50.2203 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+[node name="Camera2D" type="Camera2D" parent="YSort/Player2"]
+position = Vector2( 0, 0.351517 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
@@ -112,6 +105,9 @@ limit_top = 0
 limit_right = 320
 limit_bottom = 180
 editor_draw_limits = true
+
+[node name="RumahPasar" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 270.217, 17.6144 )
 
 [node name="penjual" type="Sprite" parent="YSort"]
 position = Vector2( 160.248, 100.781 )

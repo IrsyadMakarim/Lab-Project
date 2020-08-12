@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DirtPathTileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=4]
@@ -70,19 +69,17 @@ shape = SubResource( 2 )
 [node name="Tulupan" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 83.4877, 41.5626 )
 
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 157, 96 )
+[node name="MC" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 38.7572, 67.3707 )
 
-[node name="Camera2D2" type="Camera2D" parent="YSort/Player"]
+[node name="CameraPlayer" type="Camera2D" parent="YSort/MC"]
+position = Vector2( 0.109489, 0.597687 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
 limit_top = 0
 limit_right = 320
 limit_bottom = 180
-
-[node name="Player2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 55.7764, 68.0381 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
