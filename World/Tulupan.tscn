@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://World/tulupan.png" type="Texture" id=1]
-[ext_resource path="res://World/Tulupan.gd" type="Script" id=2]
+[ext_resource path="res://Script/Tulupan.gd" type="Script" id=2]
 
 [sub_resource type="SegmentShape2D" id=1]
 

@@ -1,7 +1,7 @@
 extends InteractableItem
 class_name ConsumableItem
 
-export var interaction_texture : Texture = preload("res://interactionhand.png")
+export var interaction_texture : Texture = preload("res://UI/interactionhand.png")
 
 func interaction_get_texture() -> Texture:
 	return interaction_texture

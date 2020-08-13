@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/interactionhand.png-54229c0c470abbb826ac7d52a7a1ee41.stex"
+path="res://.import/interactionhand.png-c500e89bfc916748c06e90e8eca18da4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interactionhand.png"
-dest_files=[ "res://.import/interactionhand.png-54229c0c470abbb826ac7d52a7a1ee41.stex" ]
+source_file="res://UI/interactionhand.png"
+dest_files=[ "res://.import/interactionhand.png-c500e89bfc916748c06e90e8eca18da4.stex" ]
 
 [params]
 

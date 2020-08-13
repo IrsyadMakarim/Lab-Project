@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://interactionsphere.png" type="Texture" id=1]
-[ext_resource path="res://interactionhand.png" type="Texture" id=2]
+[ext_resource path="res://UI/interactionsphere.png" type="Texture" id=1]
+[ext_resource path="res://UI/interactionhand.png" type="Texture" id=2]
 [ext_resource path="res://Script/InteractionComponentUI.gd" type="Script" id=3]
+
 
 [node name="InteractionComponentUI" type="Control"]
 margin_right = 128.0
