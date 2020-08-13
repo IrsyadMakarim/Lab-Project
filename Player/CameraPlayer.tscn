@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="CameraPlayer" type="Camera2D"]
+position = Vector2( 0.109489, 0.597687 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180

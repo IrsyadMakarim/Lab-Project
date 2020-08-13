@@ -1,9 +1,9 @@
 extends KinematicBody2D
 class_name Player
 
-const ACCELERATION = 500
-const MAX_SPEED = 80
-const FRICTION = 500
+const ACCELERATION = 300
+const MAX_SPEED = 60
+const FRICTION = 300
 var velocity = Vector2.ZERO
 
 onready var animPlay = $AnimationPlayer
@@ -13,7 +13,6 @@ onready var animState = animTree.get("parameters/playback")
 func _ready():
 	position = Global.pos2
 	animTree.active = true
-	pass
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO

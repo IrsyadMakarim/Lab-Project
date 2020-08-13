@@ -33,24 +33,31 @@ _global_script_classes=[ {
 "class": "TalkableCharacter",
 "language": "GDScript",
 "path": "res://Script/TalkableCharacter.gd"
+}, {
+"base": "Node2D",
+"class": "fade",
+"language": "GDScript",
+"path": "res://Level/World.gd"
 } ]
 _global_script_class_icons={
 "ConsumableItem": "",
 "InteractableItem": "",
 "InteractionComponentUI": "",
 "Player": "",
-"TalkableCharacter": ""
+"TalkableCharacter": "",
+"fade": ""
 }
 
 [application]
 
 config/name="Testing"
-run/main_scene="res://Level/World.tscn"
+run/main_scene="res://TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Level/Global.gd"
+MusicPlayer="*res://Music and Sounds/MusicPlayer.tscn"
 
 [display]
 

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music and Sounds/GDC_Nostalgia_Main_wip (online-audio-converter.com).wav" type="AudioStream" id=1]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D"]
+position = Vector2( -3.8147e-06, 0 )
+stream = ExtResource( 1 )
+volume_db = 24.0
+autoplay = true
+max_distance = 3000.0
+area_mask = 3
