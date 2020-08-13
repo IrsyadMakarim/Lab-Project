@@ -5,8 +5,7 @@ var player2
 var world
 var item = 0 setget set_item
 var max_item = 7
-var pos = Vector2(168,96)
-var pos2 = Vector2(80,152)
+var pos2 = Vector2(103,68)
 var clearlocation = Vector2(180,180)
 #var current_scene = null
 

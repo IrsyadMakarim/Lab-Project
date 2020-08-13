@@ -15,9 +15,7 @@ func _ready():
 	animationTree.active = true
 	position = Global.pos
 
-func _process(delta):
-	if Input.is_action_pressed("menu"):
-		get_tree().change_scene("res://TitleScreen.tscn")
+
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO

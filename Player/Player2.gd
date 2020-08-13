@@ -14,6 +14,10 @@ func _ready():
 	position = Global.pos2
 	animTree.active = true
 
+func _process(delta):
+	if Input.is_action_pressed("menu"):
+		get_tree().change_scene("res://Level/TitleScreen.tscn")
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")  #MOVEMENT KIRI DAN KANAN

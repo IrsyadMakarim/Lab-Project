@@ -3,7 +3,7 @@ extends ConsumableItem
 signal item_changed(value)
 
 func _ready():
-	if(Global.item >= 2):
+	if(Global.item >= 5):
 		queue_free()
 
 func interaction_interact(interactionComponentParent : Node) -> void:
