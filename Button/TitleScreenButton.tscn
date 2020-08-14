@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Button/PauseButton.gd" type="Script" id=1]
+
+[node name="TitleScreenButton" type="Button"]
+margin_top = 45.0
+margin_right = 140.0
+margin_bottom = 65.0
+text = "Title Screen"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_load = "res://Level/TitleScreen.tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Level/PasarArea.gd" type="Script" id=12]
 [ext_resource path="res://Script/Bush.gd" type="Script" id=13]
+[ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Level/Level2Area.gd" type="Script" id=15]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -37,7 +38,6 @@ shadow_color = Color( 0.0823529, 0.0823529, 0.0823529, 0.6 )
 script = ExtResource( 7 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( -0.33371, 0 )
 texture = ExtResource( 5 )
 centered = false
 region_enabled = true
@@ -184,9 +184,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Tempat" type="Label" parent="CanvasLayer"]
+[node name="Tempat" type="Label" parent="UI"]
 anchor_left = -0.00147476
 anchor_right = -0.00147476
 margin_left = 128.0
@@ -197,7 +197,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 11 )]
+[node name="MainanUI" parent="UI" instance=ExtResource( 11 )]
+
+[node name="PauseSCreen" parent="." instance=ExtResource( 14 )]
 [connection signal="body_entered" from="PasarArea" to="PasarArea" method="_on_PasarArea_body_entered"]
 [connection signal="body_exited" from="Level2Area" to="Level2Area" method="_on_Level2Area_body_exited"]
 [connection signal="body_entered" from="AreaDialog" to="." method="_on_AreaDialog_body_entered"]
