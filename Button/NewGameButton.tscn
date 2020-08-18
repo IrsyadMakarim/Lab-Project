@@ -5,7 +5,7 @@
 
 [node name="NewGameButton" instance=ExtResource( 1 )]
 icon = ExtResource( 2 )
-scene_to_load = "res://Level/World.tscn"
+scene_to_load = "res://Level/perumahan.tscn"
 
 [node name="Label" parent="." index="0"]
 text = "New Game"

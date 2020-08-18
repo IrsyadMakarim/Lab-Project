@@ -17,6 +17,8 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("menu"):
 		get_tree().change_scene("res://Level/TitleScreen.tscn")
+		$"/root/MusicPlayer".playing = true
+		$"/root/GameMusic".playing = false
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO

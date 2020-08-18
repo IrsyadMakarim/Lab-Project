@@ -1,7 +1,5 @@
 extends ConsumableItem
 
-signal item_changed(value)
-
 func _ready():
 	if(Global.item >= 5):
 		queue_free()
@@ -9,4 +7,5 @@ func _ready():
 func interaction_interact(interactionComponentParent : Node) -> void:
 	print("Layangan sudah diambil!")
 	Global.item += 1
+	Global.IsLayangan = true
 	queue_free()

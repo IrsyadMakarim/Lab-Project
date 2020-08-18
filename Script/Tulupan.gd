@@ -1,7 +1,5 @@
 extends ConsumableItem
 
-signal item_changed(value)
-
 func _ready():
 	if(Global.item >= 4):
 		queue_free()

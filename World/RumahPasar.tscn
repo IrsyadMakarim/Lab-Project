@@ -7,9 +7,10 @@ position = Vector2( 0.681541, -0.0106771 )
 scale = Vector2( 0.17298, 0.177678 )
 
 [node name="Traditional house 2" type="Sprite" parent="."]
-position = Vector2( -46.2339, -38.694 )
+position = Vector2( 0, 7.51793 )
 scale = Vector2( 1.31228, 1.38694 )
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 48.9982, 50.6841 )
 polygon = PoolVector2Array( 11.2352, 55.6382, -108.721, 59.1558, -109.444, -24.5631, -264.808, -24.5631, -268.421, -92.101, -251.078, -159.639, 161.542, -156.825, 178.885, -106.171, 175.994, -21.0455, 33.6366, -29.4877, 15.5709, -29.4877 )

@@ -3,6 +3,7 @@
 [ext_resource path="res://Level/InteractionComponent.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 20.9743 )
 
 [node name="InteractionComponent" type="Area2D"]
 collision_mask = 2147483649
