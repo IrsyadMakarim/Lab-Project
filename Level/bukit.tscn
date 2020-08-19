@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/KakekBukit.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/KakekBukit.gd" type="Script" id=14]
+[ext_resource path="res://Effects/ella.png" type="Texture" id=15]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.86882
@@ -90,7 +91,7 @@ position = Vector2( 104.947, 63.5382 )
 position = Vector2( 104.947, 50.1802 )
 
 [node name="Pohon13" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 17.0632 )
+position = Vector2( 67.4872, 14 )
 
 [node name="Pohon14" parent="YSort/Pohonan" instance=ExtResource( 6 )]
 position = Vector2( 106.343, 24.4777 )
@@ -111,7 +112,7 @@ position = Vector2( 169.804, 13.4569 )
 position = Vector2( 185.147, 13.4569 )
 
 [node name="Pohon20" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 148.651, 48.7518 )
+position = Vector2( 148.651, 47.867 )
 
 [node name="Pohon21" parent="YSort/Pohonan" instance=ExtResource( 6 )]
 position = Vector2( 105.03, 34.7752 )
@@ -120,10 +121,10 @@ position = Vector2( 105.03, 34.7752 )
 position = Vector2( 195.608, 20.3161 )
 
 [node name="Pohon23" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 163.993, 48.1783 )
+position = Vector2( 163.993, 47.867 )
 
 [node name="Pohon24" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 181.156, 48.7518 )
+position = Vector2( 181.156, 47.867 )
 
 [node name="Pohon25" parent="YSort/Pohonan" instance=ExtResource( 6 )]
 position = Vector2( 195.608, 48.1783 )
@@ -258,7 +259,7 @@ position = Vector2( 208.808, 94.0072 )
 position = Vector2( 65.8354, 144.549 )
 
 [node name="Pohon36" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 86.9889, 20.3161 )
+position = Vector2( 86.9889, 14 )
 
 [node name="Pohon74" parent="YSort/Pohonan" instance=ExtResource( 6 )]
 position = Vector2( 118.439, 171.095 )
@@ -349,7 +350,7 @@ position = Vector2( 318.407, 13.38 )
 position = Vector2( 318.162, 21.2513 )
 
 [node name="Bushes22" parent="YSort/Daun" instance=ExtResource( 12 )]
-position = Vector2( 238.25, 6.25 )
+position = Vector2( 237.186, 6.5993 )
 
 [node name="Bushes23" parent="YSort/Daun" instance=ExtResource( 12 )]
 position = Vector2( 238.25, 13.1882 )
@@ -398,6 +399,11 @@ position = Vector2( 323.51, 78.8448 )
 
 [node name="Bushes38" parent="YSort/Daun" instance=ExtResource( 12 )]
 position = Vector2( 274.729, 48.8105 )
+
+[node name="ella" type="Sprite" parent="YSort"]
+position = Vector2( 221.658, 7.57819 )
+scale = Vector2( 0.502175, 0.523894 )
+texture = ExtResource( 15 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

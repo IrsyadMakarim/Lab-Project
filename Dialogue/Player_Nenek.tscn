@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Dialogue/DialogSystem.tscn" type="PackedScene" id=1]
+
+[node name="DialogSystem" instance=ExtResource( 1 )]
+dialog = [ "Permisi Nenek, apakah nenek tahu dimana saya bisa menemukan tulupan?", "Coba tanya kepada penjual nak, dia suka jual mainan disitu", "Oke, terima kasih nek!" ]
