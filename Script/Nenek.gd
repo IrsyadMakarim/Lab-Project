@@ -1,7 +1,6 @@
 extends TalkableCharacter
 
-onready var ds = $CanvasLayer/DialogSystem
+onready var ds = $CanvasLayer/Player_Nenek
 
 func interaction_interact(interactionComponentParent : Node) -> void:
-	print("Nenek bisa bicara!")
 	ds.visible = true

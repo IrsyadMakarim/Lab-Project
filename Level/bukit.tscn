@@ -401,6 +401,7 @@ position = Vector2( 323.51, 78.8448 )
 position = Vector2( 274.729, 48.8105 )
 
 [node name="ella" type="Sprite" parent="YSort"]
+visible = false
 position = Vector2( 221.658, 7.57819 )
 scale = Vector2( 0.502175, 0.523894 )
 texture = ExtResource( 15 )
