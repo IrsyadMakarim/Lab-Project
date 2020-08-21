@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -14,7 +14,13 @@
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/KakekBukit.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/KakekBukit.gd" type="Script" id=14]
-[ext_resource path="res://Effects/ella.png" type="Texture" id=15]
+[ext_resource path="res://Dialogue/Player_Kakek_Bukit.tscn" type="PackedScene" id=15]
+[ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Dialogue/Player_Kakek_Bukit2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Script/Koin3.gd" type="Script" id=19]
+[ext_resource path="res://World/Koin.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Script/KoinUI.gd" type="Script" id=21]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.86882
@@ -217,7 +223,7 @@ position = Vector2( 192.625, 142.04 )
 position = Vector2( 255.041, 139.617 )
 
 [node name="Pohon61" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 310.356, 131.576 )
+position = Vector2( 311.777, 143.332 )
 
 [node name="Pohon62" parent="YSort/Pohonan" instance=ExtResource( 6 )]
 position = Vector2( 278.929, 94.0072 )
@@ -283,6 +289,14 @@ position = Vector2( 16.4725, 92.5207 )
 [node name="KakekBukit" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 40, 104.71 )
 script = ExtResource( 14 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/KakekBukit"]
+
+[node name="Bukit1" parent="YSort/KakekBukit/CanvasLayer" instance=ExtResource( 15 )]
+visible = false
+
+[node name="Bukit2" parent="YSort/KakekBukit/CanvasLayer" instance=ExtResource( 18 )]
+visible = false
 
 [node name="Daun" type="YSort" parent="YSort"]
 
@@ -400,13 +414,22 @@ position = Vector2( 323.51, 78.8448 )
 [node name="Bushes38" parent="YSort/Daun" instance=ExtResource( 12 )]
 position = Vector2( 274.729, 48.8105 )
 
-[node name="ella" type="Sprite" parent="YSort"]
-visible = false
-position = Vector2( 221.658, 7.57819 )
-scale = Vector2( 0.502175, 0.523894 )
-texture = ExtResource( 15 )
+[node name="Koin" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 312, 112 )
+script = ExtResource( 19 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 11 )]
+margin_top = -4.0
+margin_bottom = 11.0
+
+[node name="KoinUI" parent="CanvasLayer" instance=ExtResource( 16 )]
+margin_left = -90.0
+margin_top = -4.0
+margin_right = -10.0
+margin_bottom = 20.0
+script = ExtResource( 21 )
+
+[node name="PauseSCreen" parent="." instance=ExtResource( 17 )]
 [connection signal="body_entered" from="ToPasar" to="ToPasar" method="_on_ToPasar_body_entered"]

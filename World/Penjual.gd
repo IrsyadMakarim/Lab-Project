@@ -4,8 +4,8 @@ onready var ds = $CanvasLayer/Player_Penjual
 onready var ds2 = $CanvasLayer/Player_Penjual2
 
 func interaction_interact(interactionComponentParent : Node) -> void:
-	print("Penjual bisa bicara!")
-	if (Global.IsTulupan == false):
+	if (Global.koin < 5):
 		ds.visible = true
-	else:
+	elif (Global.koin == 5):
 		ds2.visible = true
+		Global.item += 1

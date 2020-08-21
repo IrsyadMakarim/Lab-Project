@@ -7,22 +7,49 @@ var item = 0 setget set_item
 var max_item = 7
 var pos2 = Vector2(103,68)
 var clearlocation = Vector2(180,180)
-var IsLayangan = false
-var IsTulupan = false
-var IsKelereng = false setget set_true
-var IsTomogachi = false
+var IsLayangan = false setget set_true_layangan
+var IsTulupan = false setget set_true_tulupan
+var IsKelereng = false setget set_true_kelereng
+var IsTomogachi = false setget set_true_tomogachi
+var koin = 0 setget set_koin
+var max_koin = 5
+var koin1 = false
+var koin2 = false
+var koin3 = false
+var koin4 = false
+var koin5 = false
 #var current_scene = null
 
 signal item_changed(value)
-signal true_changed(value)
+signal true_changed_kelereng(value)
+signal true_changed_layangan(value)
+signal true_changed_tulupan(value)
+signal true_changed_tomogachi(value)
+signal koin_changed(value)
 
 func set_item(value):
 	item = value
 	emit_signal("item_changed", item)
 
-func set_true(value):
+func set_true_layangan(value):
+	IsLayangan = value
+	emit_signal("true_changed_layangan", IsLayangan)
+
+func set_true_tulupan(value):
+	IsTulupan = value
+	emit_signal("true_changed_tulupan", IsTulupan)
+
+func set_true_tomogachi(value):
+	IsTomogachi = value
+	emit_signal("true_changed_tomogachi", IsTomogachi)
+
+func set_true_kelereng(value):
 	IsKelereng = value
-	emit_signal("true_changed", IsKelereng)
+	emit_signal("true_changed_kelereng", IsKelereng)
+
+func set_koin(value):
+	koin = value
+	emit_signal("koin_changed", koin)
 #func _ready():
 #	var root = get_tree().get_root()
 #	current_scene = root.get_child(root.get_child_count() -1)

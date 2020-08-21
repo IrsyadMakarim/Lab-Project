@@ -6,7 +6,6 @@ var dialog_index = 0
 
 func _ready():
 	_load_dialog()
-	dialog_index = 0
 
 func _load_dialog():
 	if dialog_index < dialog.size():

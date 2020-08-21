@@ -1,11 +1,10 @@
 extends ConsumableItem
 
 func _ready():
-	if(Global.IsLayangan == true):
+	if(Global.koin3 == true):
 		queue_free()
 
 func interaction_interact(interactionComponentParent : Node) -> void:
-	print("Layangan sudah diambil!")
-	Global.item += 1
-	Global.IsLayangan = true
+	Global.koin += 1
+	Global.koin3 = true
 	queue_free()
