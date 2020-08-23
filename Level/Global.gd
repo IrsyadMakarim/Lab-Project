@@ -11,6 +11,7 @@ var IsLayangan = false setget set_true_layangan
 var IsTulupan = false setget set_true_tulupan
 var IsKelereng = false setget set_true_kelereng
 var IsTomogachi = false setget set_true_tomogachi
+var IsBola = false setget set_true_bola
 var koin = 0 setget set_koin
 var max_koin = 5
 var koin1 = false
@@ -25,6 +26,7 @@ signal true_changed_kelereng(value)
 signal true_changed_layangan(value)
 signal true_changed_tulupan(value)
 signal true_changed_tomogachi(value)
+signal true_changed_bola(value)
 signal koin_changed(value)
 
 func set_item(value):
@@ -46,6 +48,10 @@ func set_true_tomogachi(value):
 func set_true_kelereng(value):
 	IsKelereng = value
 	emit_signal("true_changed_kelereng", IsKelereng)
+
+func set_true_bola(value):
+	IsBola = value
+	emit_signal("true_changed_bola", IsBola)
 
 func set_koin(value):
 	koin = value

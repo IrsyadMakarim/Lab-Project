@@ -1,35 +1,40 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/Tileset template 500.png" type="Texture" id=3]
+[ext_resource path="res://World/Sekolah1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Sekolah.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/Guru.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Sekolah2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Sekolah3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/Koin.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World/Tamagochi.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Script/Koin5.gd" type="Script" id=15]
+[ext_resource path="res://Script/KoinUI.gd" type="Script" id=16]
+[ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=18]
+[ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=19]
+[ext_resource path="res://World/Guru.gd" type="Script" id=20]
+[ext_resource path="res://World/Tamagochi.gd" type="Script" id=21]
+[ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Dialogue/Player_PakTika_Sekolah.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Dialogue/Player_PakTika_Sekolah2.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Dialogue/Tamagochi_Diambil.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Level/FromSekolahToRumah.gd" type="Script" id=26]
+[ext_resource path="res://Level/FromSekolahToLapangan.gd" type="Script" id=27]
 
-[sub_resource type="TileSet" id=1]
-0/name = "Tileset template 500.png 0"
-0/texture = ExtResource( 3 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 224, 96, 96, 96 )
-0/tile_mode = 1
-0/autotile/bitmask_mode = 1
-0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 292, Vector2( 0, 2 ), 4, Vector2( 1, 0 ), 448, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 7, Vector2( 2, 0 ), 64, Vector2( 2, 1 ), 73, Vector2( 2, 2 ), 1 ]
-0/autotile/icon_coordinate = Vector2( 0, 0 )
-0/autotile/tile_size = Vector2( 32, 32 )
-0/autotile/spacing = 0
-0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
-0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [  ]
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.96368
+height = 8.30744
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.60875
+height = 12.1992
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,19 +45,188 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 1182, 642 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 32, 32 )
-format = 1
+[node name="TileMap" parent="." instance=ExtResource( 6 )]
+tile_data = PoolIntArray( -65528, 2, 0, -65527, 2, 1, -65526, 2, 1, -65525, 2, 1, -65524, 2, 1, -65523, 2, 1, -65522, 2, 1, -65521, 2, 1, -65520, 2, 1, -65519, 2, 1, -65518, 2, 1, -65517, 2, 1, -65516, 2, 2, 8, 2, 65536, 9, 2, 65537, 10, 2, 65537, 11, 2, 65537, 12, 2, 65537, 13, 2, 65537, 14, 2, 65537, 15, 2, 65537, 16, 2, 65537, 17, 2, 65537, 18, 2, 65537, 19, 2, 65537, 20, 2, 65538, 65544, 2, 65536, 65545, 2, 65537, 65546, 2, 65537, 65547, 2, 65537, 65548, 2, 65537, 65549, 2, 65537, 65550, 2, 65537, 65551, 2, 65537, 65552, 2, 65537, 65553, 2, 65537, 65554, 2, 65537, 65555, 2, 65537, 65556, 2, 65538, 196606, 2, 0, 196607, 2, 1, 131072, 2, 1, 131073, 2, 1, 131074, 2, 1, 131075, 2, 1, 131076, 2, 1, 131077, 2, 1, 131078, 2, 1, 131079, 2, 1, 131080, 2, 131078, 131081, 2, 65537, 131082, 2, 65537, 131083, 2, 65537, 131084, 2, 65537, 131085, 2, 65537, 131086, 2, 65537, 131087, 2, 65537, 131088, 2, 65537, 131089, 2, 65537, 131090, 2, 65537, 131091, 2, 65537, 131092, 2, 65538, 262142, 2, 131072, 262143, 2, 131073, 196608, 2, 131073, 196609, 2, 131073, 196610, 2, 131073, 196611, 2, 131073, 196612, 2, 131073, 196613, 2, 131073, 196614, 2, 65542, 196615, 2, 65537, 196616, 2, 65537, 196617, 2, 65537, 196618, 2, 65537, 196619, 2, 65537, 196620, 2, 65537, 196621, 2, 65537, 196622, 2, 65537, 196623, 2, 65537, 196624, 2, 65537, 196625, 2, 65537, 196626, 2, 65537, 196627, 2, 65537, 196628, 2, 65538, 262150, 2, 65536, 262151, 2, 65537, 262152, 2, 65537, 262153, 2, 65537, 262154, 2, 65537, 262155, 2, 65537, 262156, 2, 65537, 262157, 2, 65537, 262158, 2, 65537, 262159, 2, 65537, 262160, 2, 65537, 262161, 2, 65541, 262162, 2, 131073, 262163, 2, 131073, 262164, 2, 131074, 327686, 2, 65536, 327687, 2, 65537, 327688, 2, 65537, 327689, 2, 65537, 327690, 2, 65537, 327691, 2, 65537, 327692, 2, 65537, 327693, 2, 65537, 327694, 2, 65537, 327695, 2, 65537, 327696, 2, 65537, 327697, 2, 65538, 327700, 0, 0, 458751, 2, 0, 393216, 2, 2, 393218, 2, 0, 393219, 2, 1, 393220, 2, 1, 393221, 2, 1, 393222, 2, 131078, 393223, 2, 65541, 393224, 2, 131073, 393225, 2, 131073, 393226, 2, 131073, 393227, 2, 131073, 393228, 2, 131073, 393229, 2, 131073, 393230, 2, 131073, 393231, 2, 131073, 393232, 2, 131073, 393233, 2, 131074, 524287, 2, 65536, 458752, 2, 131077, 458753, 2, 1, 458754, 2, 131078, 458755, 2, 65537, 458756, 2, 65537, 458757, 2, 65537, 458758, 2, 65537, 458759, 2, 65538, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458769, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 589823, 2, 65536, 524288, 2, 65537, 524289, 2, 65537, 524290, 2, 65537, 524291, 2, 65537, 524292, 2, 65537, 524293, 2, 65537, 524294, 2, 65537, 524295, 2, 131077, 524296, 2, 1, 524297, 2, 1, 524298, 2, 1, 524299, 2, 1, 524300, 2, 1, 524301, 2, 1, 524302, 2, 1, 524303, 2, 1, 524304, 2, 1, 524305, 2, 1, 524306, 2, 2, 524309, 0, 0, 524310, 0, 65537, 524311, 0, 65537, 524312, 0, 65537, 524313, 0, 65537, 524314, 0, 65537, 524315, 0, 65537, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65537, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 65537, 524326, 0, 65537, 524327, 0, 65537, 524328, 0, 65537, 524329, 0, 65537, 655359, 2, 131072, 589824, 2, 131073, 589825, 2, 131073, 589826, 2, 131073, 589827, 2, 131073, 589828, 2, 131073, 589829, 2, 131073, 589830, 2, 131073, 589831, 2, 131073, 589832, 2, 131073, 589833, 2, 131073, 589834, 2, 131073, 589835, 2, 131073, 589836, 2, 131073, 589837, 2, 131073, 589838, 2, 131073, 589839, 2, 131073, 589840, 2, 131073, 589841, 2, 65542, 589842, 2, 65538, 589845, 0, 0, 589846, 0, 65537, 589847, 0, 65537, 589848, 0, 65537, 589849, 0, 65537, 589850, 0, 65537, 589851, 0, 65537, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65537, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 65537, 589862, 0, 65537, 589863, 0, 65537, 589864, 0, 65537, 589865, 0, 65537, 655377, 2, 65536, 655378, 2, 65538, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 65537, 655383, 0, 65537, 655384, 0, 65537, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 2, 65536, 720914, 2, 65538, 720915, 0, 0, 720916, 0, 65537, 720917, 0, 65537, 720918, 0, 65537, 720919, 0, 65537, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 2, 131072, 786450, 2, 131074, 786451, 0, 0, 786452, 0, 0, 786453, 0, 65537, 786454, 0, 65537, 786455, 0, 65537, 851988, 0, 0, 851989, 0, 65537, 851990, 0, 65537, 851991, 0, 65537, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 65537, 917526, 0, 65537, 917527, 0, 65537, 983051, 0, 65537, 983052, 0, 65537, 983053, 0, 65537, 983054, 0, 65537, 983055, 0, 65537, 983056, 0, 65537, 983057, 0, 65537, 983058, 0, 65537, 983059, 0, 65537, 983060, 0, 65537, 983061, 0, 65537, 983062, 0, 65537, 983063, 0, 65537, 983064, 0, 65537, 1048588, 0, 65537, 1048589, 0, 65537, 1048590, 0, 65537, 1048591, 0, 65537, 1048592, 0, 65537, 1048593, 0, 65537, 1048594, 0, 65537, 1048595, 0, 65537, 1048596, 0, 65537, 1048597, 0, 65537, 1048598, 0, 65537, 1048599, 0, 65537, 1048600, 0, 65537, 1048601, 0, 65537, 1048602, 0, 65537, 1048603, 0, 65537, 1048604, 0, 65537, 1048605, 0, 65537, 1048606, 0, 65537, 1048607, 0, 65537, 1048608, 0, 65537, 1048609, 0, 65537, 1048610, 0, 65537, 1048611, 0, 65537, 1048612, 0, 65537, 1048613, 0, 65537, 1048614, 0, 65537, 1048615, 0, 65537, 1048616, 0, 65537, 1048617, 0, 65537, 1114124, 0, 65537, 1114125, 0, 65537, 1114126, 0, 65537, 1114127, 0, 65537, 1114128, 0, 65537, 1114129, 0, 65537, 1114130, 0, 65537, 1114131, 0, 65537, 1114132, 0, 65537, 1114133, 0, 65537, 1114134, 0, 65537, 1114135, 0, 65537, 1114136, 0, 65537, 1114137, 0, 65537, 1114138, 0, 65537, 1114139, 0, 65537, 1114140, 0, 65537, 1114141, 0, 65537, 1114142, 0, 65537, 1114143, 0, 65537, 1114144, 0, 65537, 1114145, 0, 65537, 1114146, 0, 65537, 1114147, 0, 65537, 1114148, 0, 65537, 1114149, 0, 65537, 1114150, 0, 65537, 1114151, 0, 65537, 1114152, 0, 65537, 1114153, 0, 65537, 1179660, 0, 65537, 1179661, 0, 65537, 1179662, 0, 65537, 1179663, 0, 65537, 1179664, 0, 65537, 1179665, 0, 65537, 1179666, 0, 65537, 1179667, 0, 65537, 1179668, 0, 65537, 1179669, 0, 65537, 1245197, 0, 65537, 1245198, 0, 65537, 1245199, 0, 65537, 1245200, 0, 65537, 1245201, 0, 65537, 1245202, 0, 65537, 1245203, 0, 65537, 1245204, 0, 65537 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 17.9347, 35.6339 )
+position = Vector2( 287, 166 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Sekolah" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 154.3, 48.4053 )
+[node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 22 )]
+zoom = Vector2( 0.5, 0.5 )
 
 [node name="Guru" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 187.81, 62.6587 )
+position = Vector2( 186.141, 50.6451 )
+script = ExtResource( 20 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Guru"]
+
+[node name="PakTika1" parent="YSort/Guru/CanvasLayer" instance=ExtResource( 23 )]
+visible = false
+
+[node name="PakTika2" parent="YSort/Guru/CanvasLayer" instance=ExtResource( 24 )]
+visible = false
+
+[node name="Sekolah" type="YSort" parent="YSort"]
+
+[node name="Sekolah4" parent="YSort/Sekolah" instance=ExtResource( 3 )]
+position = Vector2( 342.018, 29.719 )
+
+[node name="Sekolah" parent="YSort/Sekolah" instance=ExtResource( 4 )]
+position = Vector2( 47.4472, 115.481 )
+
+[node name="Sekolah1" parent="YSort/Sekolah" instance=ExtResource( 3 )]
+position = Vector2( 240.374, 118.232 )
+
+[node name="Sekolah2" parent="YSort/Sekolah" instance=ExtResource( 7 )]
+position = Vector2( 302.341, 92.4377 )
+
+[node name="Sekolah3" parent="YSort/Sekolah" instance=ExtResource( 8 )]
+position = Vector2( 212.458, 32.3001 )
+
+[node name="Bush" type="YSort" parent="YSort"]
+
+[node name="Bushes" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 6.45574, 35.25 )
+
+[node name="Bushes2" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 20.3674, 35.25 )
+
+[node name="Bushes3" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 33.1075, 35.4316 )
+
+[node name="Bushes4" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 46.4242, 35.4316 )
+
+[node name="Bushes5" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 58.7193, 34.5477 )
+
+[node name="Bushes6" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 71.25, 35.75 )
+
+[node name="Bushes7" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 84.75, 35.75 )
+
+[node name="Bushes8" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 96.75, 35.25 )
+
+[node name="Bushes9" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 108.75, 35 )
+
+[node name="Bushes10" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 122.842, 35 )
+
+[node name="Bushes11" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 131.75, 31.25 )
+
+[node name="Bushes12" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 132, 23.25 )
+
+[node name="Bushes13" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 133.75, 14.75 )
+
+[node name="Bushes14" parent="YSort/Bush" instance=ExtResource( 9 )]
+position = Vector2( 131.25, 4 )
+
+[node name="Pohon" type="YSort" parent="YSort"]
+
+[node name="Pohon" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 13.1193, 18.9992 )
+
+[node name="Pohon2" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 38.0927, 19.5938 )
+
+[node name="Pohon3" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 57.7146, 18.9992 )
+
+[node name="Pohon4" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 76.4446, 18.7019 )
+
+[node name="Pohon5" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 96.0665, 18.4046 )
+
+[node name="Pohon6" parent="YSort/Pohon" instance=ExtResource( 11 )]
+position = Vector2( 114.797, 18.9992 )
+
+[node name="Tree" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 135.064, 115.363 )
+
+[node name="Tree2" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 167.1, 116.03 )
+
+[node name="Tree3" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 20.9268, 162.082 )
+
+[node name="Tree4" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 80.9727, 162.082 )
+
+[node name="Tree5" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 110.573, 162.082 )
+
+[node name="Pohon7" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 312.931, 156.076 )
+
+[node name="Pohon8" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 85.6748, 88.9999 )
+
+[node name="Pohon9" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 27.6093, 87.3314 )
+
+[node name="Pohon10" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 243, 162.082 )
+
+[node name="Pohon11" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 186.141, 162.082 )
+
+[node name="Pohon12" parent="YSort/Pohon" instance=ExtResource( 12 )]
+position = Vector2( 141.348, 162.082 )
+
+[node name="Tree6" parent="YSort/Pohon" instance=ExtResource( 10 )]
+position = Vector2( 51.1215, 162.082 )
+
+[node name="Koin" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 37.6036, 125.375 )
+script = ExtResource( 15 )
+
+[node name="Tamagochi" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 13.1013, 145.898 )
+script = ExtResource( 21 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Tamagochi"]
+
+[node name="Tamagochi" parent="YSort/Tamagochi/CanvasLayer" instance=ExtResource( 25 )]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 18 )]
+margin_top = -4.0
+margin_bottom = 11.0
+
+[node name="KoinUI" parent="CanvasLayer" instance=ExtResource( 17 )]
+margin_left = -90.0
+margin_top = -4.0
+margin_right = -10.0
+margin_bottom = 20.0
+script = ExtResource( 16 )
+
+[node name="PauseSCreen" parent="." instance=ExtResource( 19 )]
+
+[node name="FromSekolahToRumah" type="Area2D" parent="."]
+script = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromSekolahToRumah"]
+position = Vector2( -16.1765, 47.8358 )
+shape = SubResource( 1 )
+
+[node name="FromSekolahToLapangan" type="Area2D" parent="."]
+script = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromSekolahToLapangan"]
+position = Vector2( 287.055, 191.865 )
+rotation = -1.5708
+shape = SubResource( 2 )
+[connection signal="body_entered" from="FromSekolahToRumah" to="FromSekolahToRumah" method="_on_FromSekolahToRumah_body_entered"]
+[connection signal="body_entered" from="FromSekolahToLapangan" to="FromSekolahToLapangan" method="_on_FromSekolahToLapangan_body_entered"]

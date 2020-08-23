@@ -3,4 +3,4 @@
 [ext_resource path="res://Dialogue/DialogSystem.tscn" type="PackedScene" id=1]
 
 [node name="DialogSystem" instance=ExtResource( 1 )]
-dialog = [ "Andi: Jual Bola mas?", "Penjual: Jual dek, harganya 5 koin ya!", "Andi: Oke!" ]
+dialog = [ "Pak Tika: Jadi itu mainanmu, lain kali jangan membawa mainan ke sekolah ya!" ]

@@ -8,4 +8,6 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 		ds.visible = true
 	elif (Global.koin == 5):
 		ds2.visible = true
+		Global.IsBola = true
 		Global.item += 1
+		Global.koin -= 5
