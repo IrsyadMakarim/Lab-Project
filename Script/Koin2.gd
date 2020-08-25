@@ -5,6 +5,7 @@ func _ready():
 		queue_free()
 
 func interaction_interact(interactionComponentParent : Node) -> void:
+	PickupItem.play()
 	Global.koin += 1
 	Global.koin2 = true
 	queue_free()

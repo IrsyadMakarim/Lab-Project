@@ -7,6 +7,7 @@ func _ready():
 		queue_free()
 
 func interaction_interact(interactionComponentParent : Node) -> void:
+	PickupItem.play()
 	Global.item += 1
 	Global.IsTomogachi = true
 	ds.visible = true

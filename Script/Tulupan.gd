@@ -7,7 +7,7 @@ func _ready():
 		queue_free()
 
 func interaction_interact(interactionComponentParent : Node) -> void:
-	print("Tulupan sudah diambil!")
+	PickupItem.play()
 	Global.item += 1
 	Global.IsTulupan = true
 	ds.visible = true

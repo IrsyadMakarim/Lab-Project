@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Music and Sounds/Star-Star_wip.wav" type="AudioStream" id=1]
+[ext_resource path="res://Music and Sounds/GDC_Nostalgia_Star_Fin.wav" type="AudioStream" id=1]
 
 [node name="GameMusic" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
-volume_db = 16.0
+volume_db = -10.948

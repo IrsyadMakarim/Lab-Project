@@ -15,10 +15,26 @@ func _ready():
 	animTree.active = true
 
 func _process(delta):
+	if Input.is_action_just_pressed("left"):
+		FootStep.play()
+	elif Input.is_action_just_pressed("right"):
+		FootStep.play()
+	elif Input.is_action_just_pressed("down"):
+		FootStep.play()
+	elif Input.is_action_just_pressed("up"):
+		FootStep.play()
+	elif Input.is_action_just_released("left"):
+		FootStep.stop()
+	elif Input.is_action_just_released("right"):
+		FootStep.stop()
+	elif Input.is_action_just_released("down"):
+		FootStep.stop()
+	elif Input.is_action_just_released("up"):
+		FootStep.stop()
 	if Input.is_action_pressed("menu"):
 		get_tree().change_scene("res://Level/TitleScreen.tscn")
-		$"/root/MusicPlayer".playing = true
-		$"/root/GameMusic".playing = false
+		$"/root/MusicPlayer".play()
+		$"/root/GameMusic".stop()
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO

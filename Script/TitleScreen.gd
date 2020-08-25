@@ -14,5 +14,5 @@ func _on_Button_pressed(scene_to_load):
 
 func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
-	$"/root/MusicPlayer".playing = false
-	$"/root/GameMusic".playing = true
+	$"/root/MusicPlayer".stop()
+	$"/root/GameMusic".play()

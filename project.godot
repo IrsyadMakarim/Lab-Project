@@ -65,6 +65,9 @@ config/icon="res://icon.png"
 Global="*res://Level/Global.gd"
 MusicPlayer="*res://Music and Sounds/MusicPlayer.tscn"
 GameMusic="*res://Music and Sounds/GameMusic.tscn"
+FootStep="*res://Music and Sounds/FootStep.tscn"
+PickupItem="*res://Music and Sounds/PickupItem.tscn"
+TalkNpc="*res://Music and Sounds/TalkNPC.tscn"
 
 [display]
 

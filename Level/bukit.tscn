@@ -3,7 +3,7 @@
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
 [ext_resource path="res://World/Water.tscn" type="PackedScene" id=3]
-[ext_resource path="res://World/bridge.png" type="Texture" id=4]
+[ext_resource path="res://World/Bridge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/Gubuk.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=7]
@@ -42,11 +42,6 @@ tile_data = PoolIntArray( 15, 0, 0, 16, 0, 0, 65537, 2, 0, 65538, 2, 1, 65539, 2
 [node name="Water" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( -65521, 0, 0, -65520, 0, 2, 15, 0, 65536, 16, 0, 65538, 65551, 0, 65536, 65552, 0, 65538, 131087, 0, 65536, 131088, 0, 65538, 196623, 0, 65536, 196624, 0, 131077, 196625, 0, 1, 196626, 0, 1, 196627, 0, 1, 196628, 0, 2, 262159, 0, 131072, 262160, 0, 131073, 262161, 0, 131073, 262162, 0, 131073, 262163, 0, 131073, 262164, 0, 131074 )
 
-[node name="Bridge" type="Sprite" parent="."]
-position = Vector2( 256.623, 33.371 )
-scale = Vector2( 0.263057, 0.207439 )
-texture = ExtResource( 4 )
-
 [node name="Layangan" parent="." instance=ExtResource( 9 )]
 position = Vector2( 293.576, 17.2197 )
 
@@ -62,6 +57,9 @@ script = ExtResource( 10 )
 position = Vector2( 32.212, 185.321 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="Bridge" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256, 36.8142 )
 
 [node name="YSort" type="YSort" parent="."]
 
