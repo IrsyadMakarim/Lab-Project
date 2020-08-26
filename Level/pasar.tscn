@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://World/Pagar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Kakek.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Ball.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Penjual.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/Nenek.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=11]
@@ -15,7 +16,7 @@
 [ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=16]
-[ext_resource path="res://World/Kakek.gd" type="Script" id=17]
+[ext_resource path="res://Script/Kakek.gd" type="Script" id=17]
 [ext_resource path="res://World/TempatJualan.tscn" type="PackedScene" id=18]
 [ext_resource path="res://World/Toko.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Dialogue/Player_Nenek.tscn" type="PackedScene" id=20]
@@ -24,10 +25,13 @@
 [ext_resource path="res://Dialogue/Player_Kakek_Pasar.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Dialogue/Player_Kakek_Pasar2.tscn" type="PackedScene" id=24]
 [ext_resource path="res://World/Koin.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Script/Ball.gd" type="Script" id=26]
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=27]
 [ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Script/KoinUI.gd" type="Script" id=29]
 [ext_resource path="res://Script/Koin1.gd" type="Script" id=30]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.59793
@@ -110,6 +114,10 @@ margin_bottom = 0.0398712
 visible = false
 margin_top = 0.0398645
 margin_bottom = 0.0398712
+
+[node name="Ball" parent="YSort/Penjual" instance=ExtResource( 8 )]
+position = Vector2( 28.4217, 2.87099 )
+script = ExtResource( 26 )
 
 [node name="Pagar" type="YSort" parent="YSort"]
 

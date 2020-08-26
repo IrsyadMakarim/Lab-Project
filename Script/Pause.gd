@@ -8,6 +8,8 @@ func _ready():
 func _on_Button_pressed(scene_load):
 	get_tree().change_scene(scene_load)
 	get_tree().paused = false
+	GameMusic.stop()
+	MusicPlayer.play()
 
 func _input(event):
 	if event.is_action_pressed("pause"):

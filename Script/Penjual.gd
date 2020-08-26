@@ -8,6 +8,7 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 		ds.visible = true
 		TalkNpc.play()
 	elif (Global.koin == 5):
+		$Ball.queue_free()
 		ds2.visible = true
 		TalkNpc.play()
 		Global.IsBola = true
