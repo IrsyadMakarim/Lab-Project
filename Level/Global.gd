@@ -6,6 +6,7 @@ var world
 var item = 0 setget set_item
 var max_item = 7
 var pos2 = Vector2(103,68)
+var tempPos 
 var clearlocation = Vector2(180,180)
 var IsLayangan = false setget set_true_layangan
 var IsTulupan = false setget set_true_tulupan

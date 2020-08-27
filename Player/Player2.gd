@@ -12,6 +12,7 @@ onready var animState = animTree.get("parameters/playback")
 
 func _ready():
 	position = Global.pos2
+	Global.tempPos = position
 	animTree.active = true
 
 func _process(delta):
