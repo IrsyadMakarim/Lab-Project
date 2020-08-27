@@ -24,12 +24,11 @@
 [ext_resource path="res://Dialogue/Layangan_Diambil.tscn" type="PackedScene" id=22]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=23]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.86882
 height = 12.0563
 
-[node name="Node2D" type="Node2D"]
+[node name="Bukit" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.254584, 0.152302 )

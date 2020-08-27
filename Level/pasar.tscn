@@ -31,8 +31,6 @@
 [ext_resource path="res://Script/KoinUI.gd" type="Script" id=29]
 [ext_resource path="res://Script/Koin1.gd" type="Script" id=30]
 
-
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.59793
 height = 13.4056

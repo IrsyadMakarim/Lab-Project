@@ -29,8 +29,6 @@
 [ext_resource path="res://Level/FromSekolahToLapangan.gd" type="Script" id=27]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=28]
 
-
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.96368
 height = 8.30744
@@ -39,7 +37,7 @@ height = 8.30744
 radius = 4.60875
 height = 12.1992
 
-[node name="Node2D" type="Node2D"]
+[node name="Sekolah" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.274985, 0.288256 )

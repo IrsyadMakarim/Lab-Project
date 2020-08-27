@@ -3,6 +3,7 @@ extends Control
 export(Array, String) var dialog
 
 var dialog_index = 0
+signal dialog_finished
 
 func _ready():
 	_load_dialog()
