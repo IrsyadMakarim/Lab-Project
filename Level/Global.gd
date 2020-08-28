@@ -4,7 +4,7 @@ var player
 var player2
 var world
 var item = 0 setget set_item
-var max_item = 7
+var max_item = 5
 var pos2 = Vector2(103,68)
 var tempPos 
 var clearlocation = Vector2(180,180)
@@ -20,7 +20,6 @@ var koin2 = false
 var koin3 = false
 var koin4 = false
 var koin5 = false
-#var current_scene = null
 
 signal item_changed(value)
 signal true_changed_kelereng(value)
@@ -57,17 +56,3 @@ func set_true_bola(value):
 func set_koin(value):
 	koin = value
 	emit_signal("koin_changed", koin)
-#func _ready():
-#	var root = get_tree().get_root()
-#	current_scene = root.get_child(root.get_child_count() -1)
-#
-#func goto_scene(path):
-#	call_deferred("_deffered_goto_scene", path)
-#
-#func _deffered_goto_scene(path):
-#	current_scene.free()
-#	var s = ResourceLoader.load(path)
-#	current_scene = s.instance()
-#	get_tree().get_root().add_child(current_scene)
-#	get_tree().set_current_scene(current_scene)
-	

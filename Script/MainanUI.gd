@@ -1,7 +1,7 @@
 extends Control
 
 var mainan = 0 setget set_mainan
-var max_mainan = 7 setget set_max_mainan
+var max_mainan = 5 setget set_max_mainan
 
 onready var label = $Label
 

@@ -195,7 +195,7 @@ position = Vector2( 37.6036, 125.375 )
 script = ExtResource( 15 )
 
 [node name="Tamagochi" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 13.1013, 145.898 )
+position = Vector2( 10.7202, 145.898 )
 script = ExtResource( 21 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Tamagochi"]

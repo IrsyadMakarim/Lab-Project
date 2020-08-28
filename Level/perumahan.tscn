@@ -400,7 +400,7 @@ script = ExtResource( 21 )
 script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToLapangan"]
-position = Vector2( 240.264, 186.115 )
+position = Vector2( 239.885, 187.603 )
 rotation = -1.5708
 shape = SubResource( 1 )
 

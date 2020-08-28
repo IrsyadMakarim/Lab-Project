@@ -22,8 +22,8 @@
 [ext_resource path="res://Dialogue/Player_Nenek.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Dialogue/Player_Penjual.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Dialogue/Player_Penjual2.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Dialogue/Player_Kakek_Pasar.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Dialogue/Player_Kakek_Pasar2.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Dialogue/NPC1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Dialogue/Player_Nenek2_Pasar.tscn" type="PackedScene" id=24]
 [ext_resource path="res://World/Koin.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Script/Ball.gd" type="Script" id=26]
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=27]
@@ -84,18 +84,16 @@ visible = false
 margin_top = 0.0398645
 margin_bottom = 0.0398712
 
+[node name="Player_Nenek2" parent="YSort/Nenek/CanvasLayer" instance=ExtResource( 24 )]
+visible = false
+
 [node name="Kakek" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 21.5488, 15.9803 )
 script = ExtResource( 17 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Kakek"]
 
-[node name="Player_Kakek_Pasar" parent="YSort/Kakek/CanvasLayer" instance=ExtResource( 23 )]
-visible = false
-margin_top = 0.0398645
-margin_bottom = 0.0398712
-
-[node name="Player_Kakek_Pasar2" parent="YSort/Kakek/CanvasLayer" instance=ExtResource( 24 )]
+[node name="Player_NPC" parent="YSort/Kakek/CanvasLayer" instance=ExtResource( 23 )]
 visible = false
 
 [node name="Penjual" parent="YSort" instance=ExtResource( 9 )]
@@ -213,6 +211,5 @@ rotation = -1.5708
 shape = SubResource( 2 )
 
 [node name="PauseSCreen" parent="." instance=ExtResource( 27 )]
-[connection signal="visibility_changed" from="YSort/Nenek/CanvasLayer/Player_Nenek" to="YSort/Nenek" method="_on_DialogSystem_visibility_changed"]
 [connection signal="body_exited" from="WorldArea" to="." method="_on_WorldArea_body_exited"]
 [connection signal="body_entered" from="ToBukit" to="ToBukit" method="_on_ToBukit_body_entered"]

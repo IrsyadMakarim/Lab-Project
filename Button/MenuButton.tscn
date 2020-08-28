@@ -17,7 +17,3 @@ anchor_bottom = 1.0
 text = "Label"
 align = 1
 valign = 1
-uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}

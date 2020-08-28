@@ -54,6 +54,7 @@ custom_constants/separation = 0
 alignment = 1
 
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
+anchor_right = 0.0
 margin_top = 28.0
 margin_right = 280.0
 margin_bottom = 65.0
