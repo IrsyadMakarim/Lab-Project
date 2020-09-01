@@ -1,13 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://World/sekolah_1.png" type="Texture" id=1]
+[ext_resource path="res://World/sekolah1nmap.png" type="Texture" id=2]
 
 [node name="Sekolah1" type="StaticBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+light_mask = 0
 position = Vector2( 2.38419e-07, -10 )
 scale = Vector2( 0.302536, 0.343213 )
 texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+light_mask = -2147483648
 polygon = PoolVector2Array( -0.303268, 6.30042, -42.3481, 6.72086, -42.7685, -13.8811, -25.9506, -21.0287, 32.0712, -21.0287, 40.9007, -12.1993, 41.3211, 6.72086 )

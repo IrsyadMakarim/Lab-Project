@@ -1,17 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://World/tree 2.png" type="Texture" id=1]
+[ext_resource path="res://World/treenmap (1).png" type="Texture" id=2]
+[ext_resource path="res://World/Tree.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.05183
 height = 4.73126
 
+[sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 2
+polygon = PoolVector2Array( -6.67445, 4.14642, -3.42078, 0.308754, 3.16999, 0.141899, 6.59052, 4.48013 )
+
 [node name="Tree" type="StaticBody2D"]
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -14.9266 )
 scale = Vector2( 0.596188, 0.575384 )
 texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PoolVector2Array( -0.287201, -32.8629, -4.95914, -30.36, -6.79454, -22.5179, -7.62881, -12.3397, -2.45631, -11.6723, -1.78889, -0.659859, 2.04877, -0.826714, 2.71619, -11.5054, 7.55499, -11.8391, 7.05442, -21.6836, 3.88418, -31.3612 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

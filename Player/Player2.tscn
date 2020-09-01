@@ -30,14 +30,14 @@ animations = [ {
 "name": "WalkRight",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "WalkLeft",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "WalkUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "WalkLeft",
 "speed": 10.0
 } ]
 
@@ -145,6 +145,7 @@ start_node = "Afk"
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+light_mask = -2147483647
 position = Vector2( 1.19209e-07, 0 )
 scale = Vector2( 0.970471, 0.798216 )
 frames = SubResource( 1 )
