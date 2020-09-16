@@ -15,6 +15,7 @@ func _load_dialog():
 		index_reset()
 		$Panel/RichTextLabel.text = dialog[dialog_index]
 		visible = false
+		get_tree().paused = false
 	dialog_index += 1
 
 func _process(delta):

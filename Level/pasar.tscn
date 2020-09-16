@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Script/KoinUI.gd" type="Script" id=29]
 [ext_resource path="res://Script/Koin1.gd" type="Script" id=30]
+[ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=31]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.59793
@@ -211,5 +212,8 @@ rotation = -1.5708
 shape = SubResource( 2 )
 
 [node name="PauseSCreen" parent="." instance=ExtResource( 27 )]
+
+[node name="Light2D" parent="." instance=ExtResource( 31 )]
+position = Vector2( 238, -47.615 )
 [connection signal="body_exited" from="WorldArea" to="." method="_on_WorldArea_body_exited"]
 [connection signal="body_entered" from="ToBukit" to="ToBukit" method="_on_ToBukit_body_entered"]

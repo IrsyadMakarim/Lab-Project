@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=2]
@@ -28,11 +28,6 @@
 [ext_resource path="res://Level/FromSekolahToRumah.gd" type="Script" id=26]
 [ext_resource path="res://Level/FromSekolahToLapangan.gd" type="Script" id=27]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Effects/2DLight.png" type="Texture" id=29]
-
-[sub_resource type="OccluderPolygon2D" id=1]
-cull_mode = 2
-polygon = PoolVector2Array( -8.02106, 20.8742, -8.02106, 17.5706, -6.72322, 12.1433, 4.36731, 12.4973, 5.66513, 15.5649, 6.60901, 20.6382 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.96368
@@ -67,11 +62,6 @@ z_as_relative = false
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 22 )]
 zoom = Vector2( 0.5, 0.5 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="YSort/Player2"]
-show_behind_parent = true
-z_as_relative = false
-occluder = SubResource( 1 )
-
 [node name="Guru" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 186.141, 50.6451 )
 z_index = 1
@@ -80,9 +70,11 @@ script = ExtResource( 20 )
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Guru"]
 
 [node name="PakTika1" parent="YSort/Guru/CanvasLayer" instance=ExtResource( 23 )]
+pause_mode = 0
 visible = false
 
 [node name="PakTika2" parent="YSort/Guru/CanvasLayer" instance=ExtResource( 24 )]
+pause_mode = 0
 visible = false
 
 [node name="Sekolah" type="YSort" parent="YSort"]
@@ -213,6 +205,7 @@ script = ExtResource( 21 )
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Tamagochi"]
 
 [node name="Tamagochi" parent="YSort/Tamagochi/CanvasLayer" instance=ExtResource( 25 )]
+pause_mode = 0
 visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -244,21 +237,5 @@ script = ExtResource( 27 )
 position = Vector2( 287.055, 191.865 )
 rotation = -1.5708
 shape = SubResource( 3 )
-
-[node name="Light2D" type="Light2D" parent="."]
-light_mask = 2
-position = Vector2( 187.742, 86.102 )
-scale = Vector2( 0.312182, 0.174265 )
-z_index = 1
-texture = ExtResource( 29 )
-range_layer_max = 2
-shadow_enabled = true
-shadow_gradient_length = 1.3
-shadow_filter = 3
-shadow_filter_smooth = 3.1
-shadow_item_cull_mask = 3
-
-[node name="CanvasModulate" type="CanvasModulate" parent="Light2D"]
-color = Color( 0.290196, 0.290196, 0.290196, 1 )
 [connection signal="body_entered" from="FromSekolahToRumah" to="FromSekolahToRumah" method="_on_FromSekolahToRumah_body_entered"]
 [connection signal="body_entered" from="FromSekolahToLapangan" to="FromSekolahToLapangan" method="_on_FromSekolahToLapangan_body_entered"]

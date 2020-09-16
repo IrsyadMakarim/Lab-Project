@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/grass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/Path2D.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 2.3885, -23.4793, -2.3885, 23.4793, 147.28, 56.6365, -11.4947, -2.04853, 11.4947, 2.04853, 181.755, 85.1316, 4.17988, 10.5578, -4.17988, -10.5578, 208.355, 56.6067, 8.35976, -0.315158, -8.35976, 0.315158, 175.738, 41.1186, 2.68707, -5.04253, -2.68707, 5.04253, 147.28, 56.6365 )
+}
+
+[node name="Path2D" type="Path2D"]
+position = Vector2( 76.594, 27.8027 )
+scale = Vector2( 0.70412, 0.667043 )
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2( 147.28, 56.6365 )
+rotation = 1.60391
+
+[node name="grass" type="Area2D" parent="PathFollow2D" instance=ExtResource( 1 )]
+position = Vector2( 2.61237, 5.30579 )

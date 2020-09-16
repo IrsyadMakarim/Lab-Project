@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Script/KoinUI.gd" type="Script" id=21]
 [ext_resource path="res://Dialogue/Layangan_Diambil.tscn" type="PackedScene" id=22]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=24]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.86882
@@ -441,4 +442,7 @@ margin_bottom = 20.0
 script = ExtResource( 21 )
 
 [node name="PauseSCreen" parent="." instance=ExtResource( 17 )]
+
+[node name="Light2D" parent="." instance=ExtResource( 24 )]
+position = Vector2( 360, 85.3854 )
 [connection signal="body_entered" from="ToPasar" to="ToPasar" method="_on_ToPasar_body_entered"]

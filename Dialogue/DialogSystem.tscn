@@ -16,6 +16,7 @@ size = 9
 font_data = SubResource( 3 )
 
 [node name="DialogSystem" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
