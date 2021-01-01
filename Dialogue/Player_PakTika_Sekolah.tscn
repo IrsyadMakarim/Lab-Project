@@ -4,3 +4,6 @@
 
 [node name="DialogSystem" instance=ExtResource( 1 )]
 dialog = [ "Andi: Siang pak, pak Tika pernah lihat mainan disekitar sini?", "Pak Tika: Ohh iya, bapak melihat ada mainan yang tertinggal di dekat gedung sekolah.", "Pak Tika: Apakah itu milikmu?" ]
+
+[node name="RichTextLabel" parent="Panel" index="0"]
+bbcode_enabled = true

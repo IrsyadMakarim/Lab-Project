@@ -38,7 +38,7 @@ func _physics_process(delta):
 	#animationPlayer.play("IdleDown") #Jika tidak sedang ngapa2in maka akan Idle ke Kiri/Kanan/Atas/Bawah
 	
 	#Movement Basic
-#if #Input.is_action_pressed("ui_right"):
+	#if #Input.is_action_pressed("ui_right"):
 		#velocity.x = 4
 	#elif Input.is_action_pressed("ui_left"):
 		#velocity.x = -4

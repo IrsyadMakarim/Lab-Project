@@ -11,9 +11,9 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	elif Global.item == 5 :
 		ds3.visible = true
 		TalkNpc.play()
-		yield(get_tree().create_timer(30.0),"timeout")
-		$CanvasLayer/FadeIn.show()
-		$CanvasLayer/FadeIn.fade_in()
+		if ds3.dialog_index >= ds3.dialog.size()-1:
+			$CanvasLayer/FadeIn.show()
+			$CanvasLayer/FadeIn.fade_in()
 	else:
 		ds2.visible = true
 		TalkNpc.play()

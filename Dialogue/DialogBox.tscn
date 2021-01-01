@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialogue/DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Effects/new_dynamicfont.tres" type="DynamicFont" id=2]
+
+[node name="Polygon2D" type="Polygon2D"]
+position = Vector2( -40, -24.9301 )
+scale = Vector2( 1.25, 1.17313 )
+color = Color( 0.0862745, 0.0784314, 0.0784314, 1 )
+polygon = PoolVector2Array( 32, 144, 32, 176, 288, 176, 288, 144 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 36.0
+margin_top = 151.0
+margin_right = 285.0
+margin_bottom = 169.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]

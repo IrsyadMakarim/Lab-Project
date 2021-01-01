@@ -23,7 +23,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-dialog = [ "", "", "", "" ]
 
 [node name="Panel" type="Panel" parent="."]
 anchor_top = 1.0
@@ -50,3 +49,8 @@ scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="Panel"]
+wait_time = 0.05
+autostart = true
+[connection signal="timeout" from="Panel/Timer" to="." method="_on_Timer_timeout"]

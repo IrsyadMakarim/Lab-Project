@@ -288,7 +288,7 @@ position = Vector2( 75.3306, 169.906 )
 
 [node name="Player2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 32, 167 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 8 )]
 zoom = Vector2( 0.5, 0.5 )
@@ -298,6 +298,7 @@ position = Vector2( 16.4725, 92.5207 )
 
 [node name="KakekBukit" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 40, 104.71 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/KakekBukit"]

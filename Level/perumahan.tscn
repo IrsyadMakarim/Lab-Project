@@ -83,7 +83,7 @@ visible = false
 
 [node name="Player2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 7, 76 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 11 )]
 zoom = Vector2( 0.5, 0.5 )
@@ -222,6 +222,12 @@ position = Vector2( 222.738, 175.545 )
 [node name="Bushes43" parent="YSort/Daunan" instance=ExtResource( 5 )]
 position = Vector2( 223.026, 182.789 )
 
+[node name="Bushes44" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 195.262, 95.0208 )
+
+[node name="Bushes45" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 194.964, 74.507 )
+
 [node name="Pagar" type="YSort" parent="YSort"]
 
 [node name="Pagar" parent="YSort/Pagar" instance=ExtResource( 7 )]
@@ -346,6 +352,7 @@ position = Vector2( 54.9917, 103.055 )
 
 [node name="Ibu" parent="YSort" instance=ExtResource( 24 )]
 position = Vector2( 80.4031, 59.8841 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 25 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Ibu"]
@@ -368,6 +375,7 @@ script = ExtResource( 23 )
 
 [node name="Kakek" parent="YSort" instance=ExtResource( 29 )]
 position = Vector2( 286.001, 119.031 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 28 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Kakek"]
@@ -377,6 +385,7 @@ visible = false
 
 [node name="Kakek2" parent="YSort" instance=ExtResource( 29 )]
 position = Vector2( 242.506, 29.795 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 31 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="YSort/Kakek2"]

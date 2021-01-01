@@ -21,9 +21,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "WalkDown",
+"name": "WalkLeft",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 14 ) ],
@@ -31,9 +31,9 @@ animations = [ {
 "name": "WalkUp",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "WalkLeft",
+"name": "WalkDown",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 17 ) ],
