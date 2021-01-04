@@ -16,22 +16,24 @@ func _ready():
 	animTree.active = true
 
 func _process(delta):
+	_control_footstep()
+	_control_menu()
+
+func _control_footstep():
 	if Input.is_action_just_pressed("left"):
-		FootStep.play()
+		if not FootStep.is_playing():
+			FootStep.play()
 	elif Input.is_action_just_pressed("right"):
-		FootStep.play()
+		if not FootStep.is_playing():
+			FootStep.play()
 	elif Input.is_action_just_pressed("down"):
-		FootStep.play()
+		if not FootStep.is_playing():
+			FootStep.play()
 	elif Input.is_action_just_pressed("up"):
-		FootStep.play()
-	elif Input.is_action_just_released("left"):
-		FootStep.stop()
-	elif Input.is_action_just_released("right"):
-		FootStep.stop()
-	elif Input.is_action_just_released("down"):
-		FootStep.stop()
-	elif Input.is_action_just_released("up"):
-		FootStep.stop()
+		if not FootStep.is_playing():
+			FootStep.play()
+
+func _control_menu():
 	if Input.is_action_pressed("menu"):
 		get_tree().change_scene("res://Level/TitleScreen.tscn")
 		$"/root/MusicPlayer".play()
@@ -42,6 +44,20 @@ func _physics_process(delta):
 	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")  #MOVEMENT KIRI DAN KANAN
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up") #MOVEMENT ATAS DAN BAWAH
 	input_vector = input_vector.normalized()
+	
+	if Input.is_action_just_pressed("cheat_button"):
+		Global.item = 5
+		Global.koin = 5
+		Global.IsBola = true
+		Global.IsKelereng = true
+		Global.IsLayangan = true
+		Global.IsTomogachi = true
+		Global.IsTulupan = true
+		Global.koin1 = true
+		Global.koin2 = true
+		Global.koin3 = true
+		Global.koin4 = true
+		Global.koin5 = true
 	
 	if input_vector != Vector2.ZERO:
 		if Input.get_action_strength("down"):
@@ -57,6 +73,7 @@ func _physics_process(delta):
 #		animState.travel("Walk") 
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
+		FootStep.stop()
 		$AnimatedSprite.stop()
 		animState.travel("Afk")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)

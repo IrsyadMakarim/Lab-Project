@@ -18,13 +18,11 @@ func _input(event):
 				dialog_index += 1
 				RTL.set_bbcode(dialog[dialog_index])
 				RTL.set_visible_characters(0)
-			elif dialog_index <= dialog.size():
+			elif dialog_index >= dialog.size()-1:
 				dialog_index = 0
 				RTL.set_bbcode(dialog[dialog_index])
 				visible = false
-				if Global.item == 5:
-					Global.isFinalDialogueDone = true
-					Global.emit_signal("final_dialogue")
+				Global.isFinalDialogueDone = true
 		else:
 			RTL.set_visible_characters(RTL.get_total_character_count())
 

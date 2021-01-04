@@ -59,11 +59,11 @@ tile_data = PoolIntArray( -131070, 3, 0, -131069, 3, 2, -65534, 3, 65536, -65533
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player2" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 313, 42 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player2"]
-position = Vector2( 0, 0.351517 )
+position = Vector2( -2.93726, 0.0781555 )
+scale = Vector2( 0.35, 0.35 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
@@ -136,7 +136,7 @@ position = Vector2( 199.974, 27.1464 )
 position = Vector2( 183.66, 27.1464 )
 
 [node name="Pohon3" parent="YSort/Pohonan" instance=ExtResource( 14 )]
-position = Vector2( 106.016, 27.1464 )
+position = Vector2( 98.8684, 26.7259 )
 
 [node name="Pohon4" parent="YSort/Pohonan" instance=ExtResource( 14 )]
 position = Vector2( 125.109, 27.1464 )

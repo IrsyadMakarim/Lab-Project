@@ -3,7 +3,7 @@
 [ext_resource path="res://Dialogue/DialogSystem.tscn" type="PackedScene" id=1]
 
 [node name="DialogSystem" instance=ExtResource( 1 )]
-dialog = [ "Andi: Bun, apakah bunda melihat mainan-mainanku?", "Bunda: Kamu mencari mainanmu nak?", "Bunda: Sepertinya bunda pernah melihat kelereng di belakang rumah" ]
+dialog = [ "Anda belum mengumpulkan semua mainan!" ]
 
 [node name="Timer" parent="Panel" index="2"]
 autostart = false

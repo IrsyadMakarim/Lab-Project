@@ -20,7 +20,10 @@ var koin2 = false
 var koin3 = false
 var koin4 = false
 var koin5 = false
+var isFinalDialogueDone = false
+var mom_final = false
 
+signal final_dialogue(value)
 signal item_changed(value)
 signal true_changed_kelereng(value)
 signal true_changed_layangan(value)

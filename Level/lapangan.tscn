@@ -53,10 +53,12 @@ tile_data = PoolIntArray( -65537, 0, 4, -131072, 0, 196609, -131071, 0, 196609, 
 position = Vector2( 25.5353, 142.929 )
 
 [node name="Player2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 195.384, 87.166 )
+position = Vector2( 98.7042, 49.3521 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 6 )]
+position = Vector2( -1.64624, 0.732971 )
+scale = Vector2( 0.35, 0.35 )
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="Gawang2" parent="YSort" instance=ExtResource( 3 )]

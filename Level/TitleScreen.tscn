@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Button/NewGameButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Button/ExitButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Script/TitleScreen.gd" type="Script" id=4]
 [ext_resource path="res://Button/CreditButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Level/cover.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Effects/ACMESecretAgentBB_Reg.ttf"
@@ -45,6 +46,11 @@ margin_top = 24.0
 margin_right = 280.0
 margin_bottom = 155.0
 size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="Menu/CenterRow"]
+position = Vector2( 139.163, 62.7737 )
+scale = Vector2( 0.303187, 0.346324 )
+texture = ExtResource( 6 )
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
 margin_right = 280.0

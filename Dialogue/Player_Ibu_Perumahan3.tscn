@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Dialogue/DialogSystem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Script/Player_Ibu_Perumahan3.gd" type="Script" id=2]
 
 [node name="DialogSystem" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
 dialog = [ "Bunda: Akhirnya kamu pulang nak.", "Bunda: Setelah keliling desa ini kamu pasti mengingat beberapa kenangan indah bersama teman-teman masa lalumu kan?", "Andi: Hehehe... iya bun, tapi sayang kenangan itu tidak berlangsung lama.", "Bunda: Jangan sedih nak, hidup memanglah seperti itu.", "Bunda: Semakin lama kita akan menjadi semakin dewasa dan meninggalkan masa kecil kita.", "Bunda: Yang bisa kita lakukan hanyalah terus maju dengan menghadapi setiap masalah yang kita dapat dan belajar dari kesalahan-kesalahan yang kita lakukan dimasa lalu.", "Bunda: Bunda yakin kok kamu bisa melakukannya!", "Andi: Terimakasih ya bun, Andi merasa lebih baik sekarang.", "Bunda: Selagi kamu di desa ini, nanti malam kita akan makan bersama teman-teman mu oke?" ]
+
+[node name="Timer" parent="Panel" index="2"]
+autostart = false
