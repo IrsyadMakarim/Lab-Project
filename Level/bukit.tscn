@@ -39,7 +39,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 1268, 1185 )
 
 [node name="TileMapBukit" parent="." instance=ExtResource( 1 )]
-tile_data = PoolIntArray( 15, 0, 0, 16, 0, 0, 65537, 2, 0, 65538, 2, 1, 65539, 2, 2, 65543, 2, 0, 65544, 2, 1, 65545, 2, 1, 65546, 2, 1, 65547, 2, 2, 65549, 2, 0, 65550, 2, 1, 65551, 2, 5, 65552, 2, 196610, 131073, 2, 65536, 131074, 2, 65537, 131075, 2, 65538, 131079, 2, 65536, 131080, 2, 65541, 131081, 2, 131073, 131082, 2, 131073, 131083, 2, 131074, 131085, 2, 65536, 131086, 2, 65541, 131087, 2, 131074, 196609, 2, 65536, 196610, 2, 65537, 196611, 2, 65538, 196615, 2, 65536, 196616, 2, 65538, 196621, 2, 131072, 196622, 2, 131074, 196624, 2, 196608, 196625, 2, 196610, 262145, 2, 65536, 262146, 2, 65537, 262147, 2, 65538, 262151, 2, 65536, 262152, 2, 262149, 262153, 2, 196609, 262154, 2, 196609, 262155, 2, 6, 262156, 2, 2, 262160, 0, 0, 262161, 0, 0, 327680, 2, 0, 327681, 2, 131078, 327682, 2, 65537, 327683, 2, 65538, 327687, 2, 65536, 327688, 2, 65538, 327691, 2, 65536, 327692, 2, 65538, 327697, 0, 0, 327714, 1, 0, 393216, 2, 65536, 393217, 2, 65537, 393218, 2, 65537, 393219, 2, 131077, 393220, 2, 1, 393221, 2, 1, 393222, 2, 1, 393223, 2, 131078, 393224, 2, 65538, 393227, 2, 65536, 393228, 2, 131077, 393229, 2, 2, 393233, 2, 0, 393234, 2, 1, 393235, 2, 2, 458752, 2, 131072, 458753, 2, 65542, 458754, 2, 65537, 458755, 2, 65541, 458756, 2, 131073, 458757, 2, 131073, 458758, 2, 131073, 458759, 2, 65542, 458760, 2, 131077, 458761, 2, 1, 458762, 2, 1, 458763, 2, 131078, 458764, 2, 65541, 458765, 2, 131074, 458769, 2, 65536, 458770, 2, 65541, 458771, 2, 131074, 524289, 2, 65536, 524290, 2, 65537, 524291, 2, 65538, 524295, 2, 131072, 524296, 2, 131073, 524297, 2, 65542, 524298, 2, 65537, 524299, 2, 65541, 524300, 2, 131074, 524305, 2, 65536, 524306, 2, 65538, 524314, 0, 0, 524315, 0, 65537, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65537, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 0, 524328, 0, 0, 524329, 0, 65537, 589825, 2, 65536, 589826, 2, 65537, 589827, 2, 65538, 589833, 2, 65536, 589834, 2, 65537, 589835, 2, 65538, 589839, 2, 0, 589840, 2, 1, 589841, 2, 131078, 589842, 2, 131077, 589843, 2, 2, 589850, 0, 0, 589851, 0, 65537, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65537, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 0, 589862, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 65537, 655361, 2, 65536, 655362, 2, 65541, 655363, 2, 131074, 655369, 2, 131072, 655370, 2, 131073, 655371, 2, 131074, 655375, 2, 131072, 655376, 2, 131073, 655377, 2, 131073, 655378, 2, 131073, 655379, 2, 131074, 655380, 0, 0, 720897, 2, 65536, 720898, 2, 65538, 720915, 0, 0, 720917, 0, 0, 786433, 2, 131072, 786434, 2, 131074, 786450, 0, 0, 786451, 0, 0, 786452, 0, 0, 851988, 0, 0, 917517, 0, 0, 917523, 0, 0, 917524, 0, 0, 983052, 0, 0, 983059, 0, 0, 1048601, 0, 0, 1048602, 0, 65537, 1048603, 0, 0, 1048606, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048611, 0, 65537, 1048612, 0, 0, 1048614, 0, 0, 1048615, 0, 65537, 1048616, 0, 65537, 1048617, 0, 65537, 1114124, 0, 0, 1114137, 0, 0, 1114138, 0, 65537, 1114139, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114146, 0, 0, 1114147, 0, 65537, 1114148, 0, 0, 1114150, 0, 0, 1114151, 0, 65537, 1114152, 0, 65537, 1114153, 0, 65537, 1179660, 0, 0, 1179661, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1376259, 1, 0, 1441795, 1, 0, 1507331, 1, 0, 1572867, 1, 0 )
+tile_data = PoolIntArray( 12, 3, 0, 13, 3, 2, 15, 0, 0, 16, 0, 0, 65536, 3, 0, 65537, 3, 1, 65538, 3, 1, 65539, 3, 5, 65540, 3, 196609, 65541, 3, 196609, 65542, 3, 196609, 65543, 3, 6, 65544, 3, 1, 65545, 3, 2, 65548, 3, 65536, 65549, 3, 131077, 65550, 3, 2, 65551, 2, 4, 65552, 2, 196610, 131072, 3, 65536, 131073, 3, 65537, 131074, 3, 65537, 131075, 3, 65538, 131079, 3, 65536, 131080, 3, 65537, 131081, 3, 65538, 131084, 3, 65536, 131085, 3, 65541, 131086, 3, 131074, 131087, 2, 131075, 196608, 3, 65536, 196609, 3, 65537, 196610, 3, 65537, 196611, 3, 65538, 196615, 3, 65536, 196616, 3, 65537, 196617, 3, 65538, 196620, 3, 65536, 196621, 3, 65538, 196624, 2, 196608, 196625, 2, 196610, 262144, 3, 65536, 262145, 3, 65537, 262146, 3, 65537, 262147, 3, 65538, 262151, 3, 65536, 262152, 3, 65537, 262153, 3, 65538, 262156, 3, 65536, 262157, 3, 65538, 262160, 0, 0, 262161, 0, 0, 327680, 3, 65536, 327681, 3, 65537, 327682, 3, 65537, 327683, 3, 65538, 327687, 3, 65536, 327688, 3, 65537, 327689, 3, 65538, 327692, 3, 65536, 327693, 3, 65538, 327697, 0, 0, 327714, 1, 0, 393216, 3, 65536, 393217, 3, 65537, 393218, 3, 65537, 393219, 3, 65538, 393223, 3, 65536, 393224, 3, 65537, 393225, 3, 65538, 393228, 3, 65536, 393229, 3, 65538, 393232, 3, 0, 393233, 3, 1, 393234, 3, 1, 393235, 3, 2, 458752, 3, 131072, 458753, 3, 65542, 458754, 3, 65537, 458755, 3, 65538, 458759, 3, 65536, 458760, 3, 65537, 458761, 3, 65538, 458764, 3, 65536, 458765, 3, 65538, 458768, 3, 65536, 458769, 3, 65537, 458770, 3, 65537, 458771, 3, 65538, 524289, 3, 65536, 524290, 3, 65541, 524291, 3, 131074, 524295, 3, 65536, 524296, 3, 65537, 524297, 3, 65538, 524300, 3, 65536, 524301, 3, 65538, 524304, 3, 65536, 524305, 3, 65537, 524306, 3, 65537, 524307, 3, 65538, 524314, 0, 0, 524315, 0, 65537, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65537, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 0, 524328, 0, 0, 524329, 0, 65537, 589825, 3, 65536, 589826, 3, 65538, 589831, 3, 131072, 589832, 3, 131073, 589833, 3, 196613, 589834, 3, 196609, 589835, 3, 196609, 589836, 3, 196614, 589837, 3, 196613, 589838, 3, 196609, 589839, 3, 196609, 589840, 3, 196614, 589841, 3, 131073, 589842, 3, 131073, 589843, 3, 131074, 589850, 0, 0, 589851, 0, 65537, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65537, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 0, 589862, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 65537, 655361, 3, 65536, 655362, 3, 65538, 655380, 0, 0, 720897, 3, 131072, 720898, 3, 131074, 720915, 0, 0, 720917, 0, 0, 786450, 0, 0, 786451, 0, 0, 786452, 0, 0, 851988, 0, 0, 917517, 0, 0, 917523, 0, 0, 917524, 0, 0, 983052, 0, 0, 983059, 0, 0, 1048601, 0, 0, 1048602, 0, 65537, 1048603, 0, 0, 1048606, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048611, 0, 65537, 1048612, 0, 0, 1048614, 0, 0, 1048615, 0, 65537, 1048616, 0, 65537, 1048617, 0, 65537, 1114124, 0, 0, 1114137, 0, 0, 1114138, 0, 65537, 1114139, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114146, 0, 0, 1114147, 0, 65537, 1114148, 0, 0, 1114150, 0, 0, 1114151, 0, 65537, 1114152, 0, 65537, 1114153, 0, 65537, 1179660, 0, 0, 1179661, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1376259, 1, 0, 1441795, 1, 0, 1507331, 1, 0, 1572867, 1, 0 )
 
 [node name="CliffTileMap" parent="." instance=ExtResource( 23 )]
 tile_data = PoolIntArray( -1, 0, 4, -65536, 0, 196609, -65535, 0, 196609, -65534, 0, 196609, -65533, 0, 196609, -65532, 0, 196609, -65531, 0, 196609, -65530, 0, 196609, -65529, 0, 196609, -65528, 0, 196609, -65527, 0, 196609, -65526, 0, 7, 65535, 0, 65539, 10, 0, 65539, 131071, 0, 65539, 65546, 0, 65539, 196607, 0, 65539, 131082, 0, 65539, 262143, 0, 65539, 196618, 0, 65539, 327679, 0, 65539, 262154, 0, 65539, 393215, 0, 65539, 327690, 0, 65539, 458751, 0, 196612, 393216, 0, 196609, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 196609, 393226, 0, 196615 )
@@ -68,223 +68,229 @@ position = Vector2( 256, 36.8142 )
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Pohonan" type="YSort" parent="YSort"]
+[node name="Pepohonan" type="YSort" parent="YSort"]
 
-[node name="Pohon" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 30.4212 )
+[node name="Pohon" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 56.123, 146.481 )
 
-[node name="Pohon2" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 39.7163 )
+[node name="Pohon2" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 55.9003, 166.749 )
 
-[node name="Pohon3" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 57.5947 )
+[node name="Pohon3" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 8.01449, 130.222 )
 
-[node name="Pohon4" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 71.1079 )
+[node name="Pohon4" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 8.01449, 148.486 )
 
-[node name="Pohon5" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 83.2972 )
+[node name="Pohon5" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 7.79177, 163.185 )
 
-[node name="Pohon6" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 90.7117 )
+[node name="Pohon6" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 7.56905, 176.549 )
 
-[node name="Pohon7" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 88.6407, 90.7117 )
+[node name="Pohon7" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 55.2321, 179.667 )
 
-[node name="Pohon8" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 104.947, 90.7117 )
+[node name="Pohon8" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 10.9099, 8.39178 )
 
-[node name="Pohon9" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 104.947, 72.8333 )
+[node name="Pohon9" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 34.5187, 8.61451 )
 
-[node name="Pohon10" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 104.947, 83.2972 )
+[node name="Pohon10" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 56.123, 8.39178 )
 
-[node name="Pohon11" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 104.947, 63.5382 )
+[node name="Pohon11" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 77.2818, 7.94633 )
 
-[node name="Pohon12" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 104.947, 50.1802 )
+[node name="Pohon12" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 97.9952, 8.16906 )
 
-[node name="Pohon13" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 67.4872, 14 )
+[node name="Pohon13" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 120.268, 8.61451 )
 
-[node name="Pohon14" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 106.343, 24.4777 )
+[node name="Pohon14" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 142.095, 9.05996 )
 
-[node name="Pohon15" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 119.812, 13.4569 )
+[node name="Pohon15" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 164.813, 10.1736 )
 
-[node name="Pohon16" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 134.677, 13.4569 )
+[node name="Pohon16" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 169.713, 26.6552 )
 
-[node name="Pohon17" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 154.179, 13.4569 )
+[node name="Pohon17" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.599, 41.355 )
 
-[node name="Pohon18" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 169.804, 13.4569 )
+[node name="Pohon18" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.599, 56.9458 )
 
-[node name="Pohon19" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 185.147, 13.4569 )
+[node name="Pohon19" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.154, 73.4274 )
 
-[node name="Pohon20" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 148.651, 47.867 )
+[node name="Pohon20" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.154, 84.7864 )
 
-[node name="Pohon21" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 105.03, 34.7752 )
+[node name="Pohon21" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.154, 99.9316 )
 
-[node name="Pohon22" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 195.608, 20.3161 )
+[node name="Pohon22" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.154, 112.404 )
 
-[node name="Pohon23" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 163.993, 47.867 )
+[node name="Pohon23" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 167.485, 127.327 )
 
-[node name="Pohon24" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 181.156, 47.867 )
+[node name="Pohon24" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 167.263, 137.572 )
 
-[node name="Pohon25" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 195.608, 48.1783 )
+[node name="Pohon25" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.967, 137.572 )
 
-[node name="Pohon26" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 196.45, 30.1377 )
+[node name="Pohon26" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.522, 122.204 )
 
-[node name="Pohon27" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 195.608, 37.7143 )
+[node name="Pohon27" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.076, 106.836 )
 
-[node name="Pohon28" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 47.9593, 13.38 )
+[node name="Pohon28" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.522, 91.9136 )
 
-[node name="Pohon29" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 28.3374, 12.7854 )
+[node name="Pohon29" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.744, 76.1001 )
 
-[node name="Pohon30" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 11.6885, 18.1368 )
+[node name="Pohon30" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 182.853, 61.8457 )
 
-[node name="Pohon31" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 12.2831, 32.4073 )
+[node name="Pohon31" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.299, 48.705 )
 
-[node name="Pohon32" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 11.3912, 47.867 )
+[node name="Pohon32" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.076, 36.2324 )
 
-[node name="Pohon33" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 10.7966, 61.2456 )
+[node name="Pohon33" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 183.967, 22.6462 )
 
-[node name="Pohon34" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 10.4993, 74.9214 )
+[node name="Pohon34" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 106.904, 36.6779 )
 
-[node name="Pohon37" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 10.7966, 144.549 )
+[node name="Pohon35" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 88.6408, 36.0097 )
 
-[node name="Pohon38" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 9.90471, 156.738 )
+[node name="Pohon36" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.8183, 36.6779 )
 
-[node name="Pohon39" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 10.4993, 167.202 )
+[node name="Pohon37" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 69.041, 51.155 )
 
-[node name="Pohon40" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 78.2841, 90.0838 )
+[node name="Pohon38" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 69.041, 62.2912 )
 
-[node name="Pohon42" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 53.3108, 172.734 )
+[node name="Pohon39" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.3728, 73.2047 )
 
-[node name="Pohon43" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 86.9889, 134.085 )
+[node name="Pohon40" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.8183, 85.2318 )
 
-[node name="Pohon44" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 66.0947, 159.355 )
+[node name="Pohon41" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.3728, 99.4862 )
 
-[node name="Pohon45" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 65.8354, 134.085 )
+[node name="Pohon42" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.3728, 111.291 )
 
-[node name="Pohon47" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 142.84, 164.693 )
+[node name="Pohon43" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.3728, 125.1 )
 
-[node name="Pohon49" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 142.84, 155.013 )
+[node name="Pohon44" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 68.1501, 138.24 )
 
-[node name="Pohon50" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 110.115, 134.085 )
+[node name="Pohon45" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 104.232, 153.163 )
 
-[node name="Pohon52" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 124.531, 139.617 )
+[node name="Pohon55" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 127.618, 165.413 )
 
-[node name="Pohon53" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 150.528, 172.734 )
+[node name="Pohon56" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 148.331, 165.413 )
 
-[node name="Pohon54" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 142.84, 139.617 )
+[node name="Pohon57" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 168.153, 165.413 )
 
-[node name="Pohon55" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 168.246, 172.139 )
+[node name="Pohon58" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 187.753, 165.858 )
 
-[node name="Pohon56" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 189.306, 172.139 )
+[node name="Pohon59" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 208.912, 166.081 )
 
-[node name="Pohon57" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 192.625, 154.229 )
+[node name="Pohon60" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 227.621, 166.081 )
 
-[node name="Pohon58" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 215.11, 126.238 )
+[node name="Pohon61" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 247.443, 166.081 )
 
-[node name="Pohon59" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 192.625, 142.04 )
+[node name="Pohon62" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 265.261, 166.081 )
 
-[node name="Pohon60" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 255.041, 139.617 )
+[node name="Pohon63" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 284.416, 166.081 )
 
-[node name="Pohon61" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 311.777, 143.332 )
+[node name="Pohon64" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 300.006, 166.081 )
 
-[node name="Pohon62" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 278.929, 94.0072 )
+[node name="Pohon65" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 315.597, 166.304 )
 
-[node name="Pohon63" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 313.758, 92.5207 )
+[node name="Pohon66" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 314.484, 90.3545 )
 
-[node name="Pohon64" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 148.745, 107.922 )
+[node name="Pohon67" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 291.988, 90.3545 )
 
-[node name="Pohon65" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 173.123, 109.111 )
+[node name="Pohon68" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 267.043, 90.3545 )
 
-[node name="Pohon66" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 148.745, 83.5432 )
+[node name="Pohon69" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 253.234, 99.0408 )
 
-[node name="Pohon67" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 173.123, 82.354 )
+[node name="Pohon70" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 229.626, 100.6 )
 
-[node name="Pohon68" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 197.205, 59.1644 )
+[node name="Pohon71" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 250.784, 115.522 )
 
-[node name="Pohon69" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 150.528, 59.759 )
+[node name="Pohon72" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 229.848, 115.745 )
 
-[node name="Pohon70" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 173.123, 60.651 )
+[node name="Pohon73" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 250.562, 130.445 )
 
-[node name="Pohon71" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 208.8, 68.0587 )
+[node name="Pohon74" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 227.176, 130.89 )
 
-[node name="Pohon72" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 208.8, 81.1822 )
+[node name="Pohon46" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 103.563, 164.522 )
 
-[node name="Pohon73" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 208.808, 94.0072 )
+[node name="Pohon47" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 103.118, 134.899 )
 
-[node name="Pohon35" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 65.8354, 144.549 )
+[node name="Pohon48" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 103.341, 116.191 )
 
-[node name="Pohon36" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 86.9889, 14 )
+[node name="Pohon49" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 103.341, 103.495 )
 
-[node name="Pohon74" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 118.439, 171.095 )
+[node name="Pohon50" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 103.786, 93.0272 )
 
-[node name="Pohon75" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 97.0336, 171.392 )
+[node name="Pohon51" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 104.9, 80.7773 )
 
-[node name="Pohon76" parent="YSort/Pohonan" instance=ExtResource( 6 )]
-position = Vector2( 75.3306, 169.906 )
+[node name="Pohon52" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 104.454, 71.2002 )
+
+[node name="Pohon53" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 105.345, 62.2912 )
+
+[node name="Pohon54" parent="YSort/Pepohonan" instance=ExtResource( 6 )]
+position = Vector2( 105.791, 52.714 )
 
 [node name="Player2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 32, 167 )
@@ -399,7 +405,7 @@ position = Vector2( 237.5, 66.6066 )
 position = Vector2( 237.5, 74.0022 )
 
 [node name="Bushes30" parent="YSort/Daun" instance=ExtResource( 12 )]
-position = Vector2( 244.784, 77.3094 )
+position = Vector2( 245.229, 77.5321 )
 
 [node name="Bushes31" parent="YSort/Daun" instance=ExtResource( 12 )]
 position = Vector2( 255.041, 77.6068 )
@@ -446,4 +452,5 @@ script = ExtResource( 21 )
 
 [node name="Light2D" parent="." instance=ExtResource( 24 )]
 position = Vector2( 360, 85.3854 )
+texture_scale = 3.0
 [connection signal="body_entered" from="ToPasar" to="ToPasar" method="_on_ToPasar_body_entered"]

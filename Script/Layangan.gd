@@ -11,5 +11,5 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	Global.item += 1
 	Global.IsLayangan = true
 	ds.visible = true
-	yield(get_tree().create_timer(1.0), "timeout")
+	yield(get_tree().create_timer(.5), "timeout")
 	queue_free()

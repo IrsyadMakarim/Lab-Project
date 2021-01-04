@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Button/MenuButton.tscn" type="PackedScene" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Effects/ACMESecretAgentBB_BoldItal.otf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[node name="CreditButton" instance=ExtResource( 1 )]
+scene_to_load = "res://Button/Credit.tscn"
+
+[node name="Label" parent="." index="0"]
+custom_fonts/font = SubResource( 2 )
+text = "Credits"

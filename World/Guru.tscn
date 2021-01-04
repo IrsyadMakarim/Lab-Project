@@ -9,7 +9,7 @@ height = 1.77398
 [node name="Guru" type="StaticBody2D"]
 
 [node name="guru" type="Sprite" parent="."]
-position = Vector2( 0, -7.25899 )
+position = Vector2( -0.0625, -8.07149 )
 scale = Vector2( 0.0721255, 0.0654329 )
 texture = ExtResource( 1 )
 
