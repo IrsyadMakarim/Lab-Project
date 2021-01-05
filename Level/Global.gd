@@ -5,7 +5,7 @@ var player2
 var world
 var item = 0 setget set_item
 var max_item = 5
-var pos2 = Vector2(103,68)
+var pos2 = Vector2(80,12)
 var tempPos 
 var clearlocation = Vector2(180,180)
 var IsLayangan = false setget set_true_layangan
@@ -22,6 +22,7 @@ var koin4 = false
 var koin5 = false
 var isFinalDialogueDone = false
 var mom_final = false
+var isDoorStart = false
 
 signal final_dialogue(value)
 signal item_changed(value)

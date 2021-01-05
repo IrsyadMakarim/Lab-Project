@@ -15,6 +15,7 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	if(Global.IsKelereng == false):
 		ds.visible = true
 		dsTimer.start()
+		Global.isDoorStart = true
 		TalkNpc.play()
 	elif Global.item == 5 :
 		ds3.visible = true

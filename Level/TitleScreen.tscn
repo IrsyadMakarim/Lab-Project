@@ -5,7 +5,7 @@
 [ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Script/TitleScreen.gd" type="Script" id=4]
 [ext_resource path="res://Button/CreditButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Level/cover.png" type="Texture" id=6]
+[ext_resource path="res://Level/Cover_Image_3.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Effects/ACMESecretAgentBB_Reg.ttf"
@@ -65,6 +65,7 @@ anchor_right = 0.0
 margin_top = 18.0
 margin_right = 280.0
 margin_bottom = 55.0
+scene_to_load = "res://Level/Level2.tscn"
 
 [node name="CreditButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 5 )]
 margin_top = 55.0

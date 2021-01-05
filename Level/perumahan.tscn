@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Water.tscn" type="PackedScene" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://World/Gubuk.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Dialogue/Dialog.gd" type="Script" id=10]
 [ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Level/ToLapangan.gd" type="Script" id=13]
 [ext_resource path="res://World/Koin.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=15]
@@ -20,8 +20,6 @@
 [ext_resource path="res://Level/FromPerumahanToPasar.gd" type="Script" id=18]
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Dialogue/Kelereng_Diambil.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Script/KoinUI.gd" type="Script" id=21]
-[ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Script/Koin2.gd" type="Script" id=23]
 [ext_resource path="res://World/Ibu.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Script/Ibu.gd" type="Script" id=25]
@@ -85,6 +83,7 @@ visible = false
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player2" parent="YSort" instance=ExtResource( 38 )]
+position = Vector2( 103.156, 80.005 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 11 )]
@@ -382,7 +381,7 @@ position = Vector2( 46.6225, 6.48631 )
 position = Vector2( 54.9917, 103.055 )
 
 [node name="Ibu" parent="YSort" instance=ExtResource( 24 )]
-position = Vector2( 80.4031, 59.8841 )
+position = Vector2( 135.153, 56.1341 )
 scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 25 )
 
@@ -437,18 +436,7 @@ visible = false
 [node name="FadeIn" parent="YSort/Door/CanvasLayer" instance=ExtResource( 36 )]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 12 )]
-margin_top = -4.0
-margin_bottom = 11.0
-
-[node name="KoinUI" parent="CanvasLayer" instance=ExtResource( 22 )]
-margin_left = -90.0
-margin_top = -4.0
-margin_right = -10.0
-margin_bottom = 20.0
-script = ExtResource( 21 )
+[node name="UI" parent="." instance=ExtResource( 12 )]
 
 [node name="ToLapangan" type="Area2D" parent="."]
 script = ExtResource( 13 )
@@ -458,12 +446,22 @@ position = Vector2( 239.885, 187.603 )
 rotation = -1.5708
 shape = SubResource( 1 )
 
-[node name="ToPasar" type="Area2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="ToLapangan"]
+
+[node name="FadeIn" parent="ToLapangan/CanvasLayer" instance=ExtResource( 36 )]
+visible = false
+
+[node name="ToStartArea" type="Area2D" parent="."]
 script = ExtResource( 18 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ToPasar"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToStartArea"]
 position = Vector2( -15.102, 84.014 )
 shape = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ToStartArea"]
+
+[node name="FadeIn" parent="ToStartArea/CanvasLayer" instance=ExtResource( 36 )]
+visible = false
 
 [node name="PauseSCreen" parent="." instance=ExtResource( 19 )]
 
@@ -471,15 +469,22 @@ shape = SubResource( 2 )
 script = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FromRumahToSekolah"]
-position = Vector2( 331.975, 36.2227 )
+position = Vector2( 332.329, 32.6872 )
 shape = SubResource( 3 )
 
-[node name="Light2D" parent="." instance=ExtResource( 37 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="FromRumahToSekolah"]
+
+[node name="FadeIn" parent="FromRumahToSekolah/CanvasLayer" instance=ExtResource( 36 )]
 visible = false
+
+[node name="Light2D" parent="." instance=ExtResource( 37 )]
 position = Vector2( -33.3541, -18.7424 )
 texture_scale = 3.0
 energy = 0.46
 [connection signal="fade_finished" from="YSort/Door/CanvasLayer/FadeIn" to="YSort/Ibu" method="_on_FadeIn_fade_finished"]
 [connection signal="body_entered" from="ToLapangan" to="ToLapangan" method="_on_ToLapangan_body_entered"]
-[connection signal="body_entered" from="ToPasar" to="ToPasar" method="_on_ToPasar_body_entered"]
+[connection signal="fade_finished" from="ToLapangan/CanvasLayer/FadeIn" to="ToLapangan" method="_on_FadeIn_fade_finished"]
+[connection signal="body_entered" from="ToStartArea" to="ToStartArea" method="_on_ToPasar_body_entered"]
+[connection signal="fade_finished" from="ToStartArea/CanvasLayer/FadeIn" to="ToStartArea" method="_on_FadeIn_fade_finished"]
 [connection signal="body_entered" from="FromRumahToSekolah" to="FromRumahToSekolah" method="_on_FromRumahToSekolah_body_entered"]
+[connection signal="fade_finished" from="FromRumahToSekolah/CanvasLayer/FadeIn" to="FromRumahToSekolah" method="_on_FadeIn_fade_finished"]

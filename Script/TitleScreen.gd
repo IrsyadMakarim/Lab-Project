@@ -15,7 +15,7 @@ func _on_Button_pressed(scene_to_load):
 	reset()
 
 func reset():
-	Global.pos2 = Vector2(103,68)
+	Global.pos2 = Vector2(80,12)
 	Global.item = 0
 	Global.koin = 0
 	Global.IsBola = false

@@ -1,0 +1,490 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Pohon2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Pagar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Level/FromPEToPasar.gd" type="Script" id=12]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=13]
+[ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=14]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Level/FromPEToPerumahan2.gd" type="Script" id=16]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.99887
+height = 7.90945
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.95789
+height = 11.6358
+
+[node name="PasarExtended" type="Node2D"]
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 162.905, 91.0406 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 333.16, 168.581, 817.51, 485.231 )
+
+[node name="CliffTileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -1, 0, 4, -65536, 0, 196609, -65535, 0, 196609, -65534, 0, 196609, -65533, 0, 196609, -65532, 0, 196609, -65531, 0, 196609, -65530, 0, 196609, -65529, 0, 196609, -65528, 0, 196609, -65527, 0, 196609, -65526, 0, 7, 65535, 0, 65539, 10, 0, 65539, 131070, 0, 4, 131071, 0, 196615, 65546, 0, 196612, 65547, 0, 7, 196606, 0, 65539, 131083, 0, 65539, 262142, 0, 65539, 196619, 0, 65539, 327678, 0, 196612, 327679, 0, 7, 262154, 0, 4, 262155, 0, 196615, 393215, 0, 65539, 327690, 0, 65539, 458751, 0, 196612, 393216, 0, 196609, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 196609, 393226, 0, 196615 )
+
+[node name="Water" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( -65534, 0, 0, -65533, 0, 2, -65519, 0, 0, -65518, 0, 2, 2, 0, 65536, 3, 0, 65538, 17, 0, 65536, 18, 0, 65538, 64, 0, 0, 65, 0, 5, 66, 0, 196609, 67, 0, 7, 65538, 0, 65536, 65539, 0, 65538, 65553, 0, 65536, 65554, 0, 65538, 65600, 0, 65536, 65601, 0, 65538, 65603, 0, 65539, 131074, 0, 65536, 131075, 0, 131077, 131076, 0, 1, 131077, 0, 1, 131078, 0, 1, 131079, 0, 1, 131080, 0, 1, 131081, 0, 1, 131082, 0, 1, 131083, 0, 1, 131084, 0, 1, 131085, 0, 1, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, 131089, 0, 131078, 131090, 0, 65538, 131136, 0, 65536, 131137, 0, 65538, 131139, 0, 65539, 196610, 0, 131072, 196611, 0, 131073, 196612, 0, 131073, 196613, 0, 131073, 196614, 0, 131073, 196615, 0, 131073, 196616, 0, 131073, 196617, 0, 131073, 196618, 0, 131073, 196619, 0, 131073, 196620, 0, 131073, 196621, 0, 131073, 196622, 0, 131073, 196623, 0, 131073, 196624, 0, 131073, 196625, 0, 131073, 196626, 0, 131074, 196672, 0, 131072, 196673, 0, 65543, 196675, 0, 65539, 196709, 0, 196611, 262209, 0, 65539, 262211, 0, 65539, 327744, 0, 0, 327745, 0, 131079, 327747, 0, 65539, 393280, 0, 65540, 393281, 0, 131074, 393283, 0, 65539, 458816, 0, 65539, 458819, 0, 65539, 524352, 0, 65539, 524354, 0, 0, 524355, 0, 131079, 589888, 0, 65539, 589890, 0, 65536, 589891, 0, 65538, 655424, 0, 65539, 655426, 0, 65536, 655427, 0, 65538, 720960, 0, 196612, 720961, 0, 196609, 720962, 0, 262150, 720963, 0, 65538, 786498, 0, 131072, 786499, 0, 131074 )
+
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( 14, 0, 65537, 15, 0, 65537, 16, 0, 65537, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 262156, 0, 0, 262157, 0, 0, 262159, 0, 0, 393215, 3, 0, 327680, 3, 1, 327681, 3, 1, 327682, 3, 1, 327683, 3, 1, 327684, 3, 1, 327685, 3, 1, 327686, 3, 1, 327687, 3, 1, 327688, 3, 1, 327689, 3, 1, 327690, 3, 1, 327691, 3, 1, 327692, 3, 1, 327693, 3, 1, 327694, 3, 1, 327695, 3, 1, 327696, 3, 1, 327697, 3, 1, 327698, 3, 1, 327699, 3, 1, 327700, 3, 1, 327701, 3, 2, 458751, 3, 131072, 393216, 3, 131073, 393217, 3, 131073, 393218, 3, 131073, 393219, 3, 131073, 393220, 3, 131073, 393221, 3, 131073, 393222, 3, 131073, 393223, 3, 131073, 393224, 3, 131073, 393225, 3, 131073, 393226, 3, 131073, 393227, 3, 131073, 393228, 3, 131073, 393229, 3, 131073, 393230, 3, 131073, 393231, 3, 131073, 393232, 3, 131073, 393233, 3, 131073, 393234, 3, 131073, 393235, 3, 131073, 393236, 3, 131073, 393237, 3, 131074, 458771, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 65537, 524326, 0, 65537, 524327, 0, 65537, 524328, 0, 65537, 524329, 0, 65537, 589852, 0, 0, 589853, 0, 0, 589855, 0, 0, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 65537, 589862, 0, 65537, 589863, 0, 65537, 589864, 0, 65537, 589865, 0, 65537, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 786453, 0, 0, 786454, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 983051, 0, 65537, 983052, 0, 65537, 983053, 0, 0, 1048588, 0, 65537, 1048589, 0, 0, 1048611, 0, 0, 1048612, 0, 0, 1048613, 0, 65537, 1048614, 0, 65537, 1048615, 0, 65537, 1048616, 0, 65537, 1048617, 0, 65537, 1114124, 0, 65537, 1114125, 0, 0, 1114148, 0, 0, 1114149, 0, 65537, 1114150, 0, 65537, 1114151, 0, 65537, 1114152, 0, 65537, 1114153, 0, 65537, 1179660, 0, 65537, 1179661, 0, 0, 1179662, 0, 0, 1245197, 0, 65537, 1245198, 0, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Pagar" type="YSort" parent="YSort"]
+
+[node name="Pagar" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 9.89949, 79.196 )
+
+[node name="Pagar2" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 29.4849, 79.4319 )
+
+[node name="Pagar3" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 49.0703, 79.6679 )
+
+[node name="Pagar4" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 68.4197, 79.6679 )
+
+[node name="Pagar5" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 88.0051, 79.9039 )
+
+[node name="Pagar6" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 107.59, 79.9039 )
+
+[node name="Pagar7" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 126.704, 80.1399 )
+
+[node name="Pagar8" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 146.704, 80.1399 )
+
+[node name="Pagar9" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 165.704, 80.1399 )
+
+[node name="Pagar10" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 184.704, 80.1399 )
+
+[node name="Pagar11" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 203.704, 80.1399 )
+
+[node name="Pagar12" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 222.704, 80.1399 )
+
+[node name="Pagar13" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 241.704, 80.1399 )
+
+[node name="Pagar14" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 260.704, 80.1399 )
+
+[node name="Pagar15" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 279.704, 80.1399 )
+
+[node name="Pagar16" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 299.704, 80.1399 )
+
+[node name="Pagar17" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 318.704, 80.1399 )
+
+[node name="Pagar18" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 318.704, 111.14 )
+
+[node name="Pagar19" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 299.704, 111.14 )
+
+[node name="Pagar20" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 280.704, 111.14 )
+
+[node name="Pagar21" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 261.704, 111.14 )
+
+[node name="Pagar22" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 242.704, 111.14 )
+
+[node name="Pagar23" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 223.704, 111.14 )
+
+[node name="Pagar24" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 204.704, 111.14 )
+
+[node name="Pagar25" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 185.704, 111.14 )
+
+[node name="Pagar26" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 166.704, 111.14 )
+
+[node name="Pagar27" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 147.704, 111.14 )
+
+[node name="Pagar28" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 128.704, 111.14 )
+
+[node name="Pagar29" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 109.704, 111.14 )
+
+[node name="Pagar30" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 90.7039, 111.14 )
+
+[node name="Pagar31" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 71.7039, 111.14 )
+
+[node name="Pagar32" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 52.7039, 111.14 )
+
+[node name="Pagar33" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 33.7039, 111.14 )
+
+[node name="Pagar34" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( 14.7039, 111.14 )
+
+[node name="Pagar35" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( -5.29605, 111.14 )
+
+[node name="Pagar36" parent="YSort/Pagar" instance=ExtResource( 10 )]
+position = Vector2( -9.29605, 79.1399 )
+
+[node name="Pohon" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 89.768, 14.6832 )
+
+[node name="Tree2" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 122.805, 14.0158 )
+
+[node name="Tree3" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 156.844, 13.3484 )
+
+[node name="Tree4" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 186.878, 14.3495 )
+
+[node name="Tree5" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 220.916, 14.3495 )
+
+[node name="Tree6" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 252.952, 13.3484 )
+
+[node name="Tree8" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 310.35, 13.0147 )
+
+[node name="Tree9" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 282.986, 70.0791 )
+
+[node name="Tree10" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 272.307, 136.821 )
+
+[node name="Tree11" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 208.569, 157.511 )
+
+[node name="Tree12" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 102.449, 141.493 )
+
+[node name="Tree15" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 145.498, 151.504 )
+
+[node name="Tree16" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 286.657, 167.856 )
+
+[node name="Tree13" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 17.0192, 141.827 )
+
+[node name="Tree14" parent="YSort/Pohon" instance=ExtResource( 9 )]
+position = Vector2( 51.725, 164.519 )
+
+[node name="Pohon" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 11.0124, 67.0757 )
+
+[node name="Pohon2" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 57.7318, 68.7442 )
+
+[node name="Pohon3" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 130.481, 70.0791 )
+
+[node name="Pohon4" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 191.883, 69.078 )
+
+[node name="Pohon5" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 234.932, 69.7454 )
+
+[node name="Pohon6" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 304.677, 141.827 )
+
+[node name="Pohon7" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 245.611, 145.164 )
+
+[node name="Pohon11" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 230.594, 170.192 )
+
+[node name="Pohon8" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 179.536, 139.491 )
+
+[node name="Pohon10" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 114.463, 163.518 )
+
+[node name="Pohon9" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 68.7443, 144.83 )
+
+[node name="Bush" type="YSort" parent="YSort"]
+
+[node name="Bushes" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 69.4117, 29.7002 )
+
+[node name="Bushes2" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 82.0926, 29.3665 )
+
+[node name="Bushes3" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 96.0926, 29.3665 )
+
+[node name="Bushes4" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 108.093, 29.3665 )
+
+[node name="Bushes5" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 121.093, 29.3665 )
+
+[node name="Bushes6" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 134.093, 29.3665 )
+
+[node name="Bushes7" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 147.093, 29.3665 )
+
+[node name="Bushes8" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 160.093, 29.3665 )
+
+[node name="Bushes9" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 172.093, 29.3665 )
+
+[node name="Bushes10" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 185.093, 29.3665 )
+
+[node name="Bushes11" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 198.093, 29.3665 )
+
+[node name="Bushes12" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 211.093, 29.3665 )
+
+[node name="Bushes13" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 224.093, 29.3665 )
+
+[node name="Bushes14" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 236.093, 29.3665 )
+
+[node name="Bushes15" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 248.093, 29.3665 )
+
+[node name="Bushes16" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 260.093, 29.3665 )
+
+[node name="Bushes17" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 269.179, 28.8367 )
+
+[node name="Bushes18" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 307.725, 53.999 )
+
+[node name="Bushes19" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 306.482, 25.3935 )
+
+[node name="Bushes20" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 306.417, 32.5449 )
+
+[node name="Bushes21" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 306.557, 40.4908 )
+
+[node name="Bushes22" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 307.087, 48.0637 )
+
+[node name="Bushes23" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 305.093, 62.3665 )
+
+[node name="Bushes24" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 293.093, 62.3665 )
+
+[node name="Bushes25" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 281.093, 62.3665 )
+
+[node name="Bushes61" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 281.093, 62.3665 )
+
+[node name="Bushes26" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 268.093, 62.3665 )
+
+[node name="Bushes27" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 256.093, 62.3665 )
+
+[node name="Bushes28" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 245.093, 62.3665 )
+
+[node name="Bushes29" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 234.093, 62.3665 )
+
+[node name="Bushes30" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 222.093, 62.3665 )
+
+[node name="Bushes31" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 211.093, 62.3665 )
+
+[node name="Bushes32" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 200.093, 62.3665 )
+
+[node name="Bushes33" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 188.093, 62.3665 )
+
+[node name="Bushes34" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 177.093, 62.3665 )
+
+[node name="Bushes35" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 166.093, 62.3665 )
+
+[node name="Bushes36" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 154.093, 62.3665 )
+
+[node name="Bushes37" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 141.093, 62.3665 )
+
+[node name="Bushes38" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 129.093, 62.3665 )
+
+[node name="Bushes39" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 116.093, 62.3665 )
+
+[node name="Bushes40" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 104.093, 62.3665 )
+
+[node name="Bushes41" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 93.0927, 62.3665 )
+
+[node name="Bushes42" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 82.0927, 62.3665 )
+
+[node name="Bushes43" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 71.0927, 62.3665 )
+
+[node name="Bushes44" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 60.0927, 62.3665 )
+
+[node name="Bushes45" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 50.0927, 62.3665 )
+
+[node name="Bushes46" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 40.0927, 62.3665 )
+
+[node name="Bushes47" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 62.3665 )
+
+[node name="Bushes48" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 55.3665 )
+
+[node name="Bushes49" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 48.3665 )
+
+[node name="Bushes50" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 42.3665 )
+
+[node name="Bushes51" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 36.3665 )
+
+[node name="Bushes52" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 28.0927, 31.3665 )
+
+[node name="Bushes53" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 27.8699, 24.1438 )
+
+[node name="Bushes54" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 27.8699, 17.1438 )
+
+[node name="Bushes55" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 27.8699, 10.1438 )
+
+[node name="Bushes56" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 27.8699, 3.14375 )
+
+[node name="Bushes57" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 67.8699, 3.14375 )
+
+[node name="Bushes58" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 67.8699, 10.1438 )
+
+[node name="Bushes59" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 67.8699, 17.1438 )
+
+[node name="Bushes60" parent="YSort/Bush" instance=ExtResource( 5 )]
+position = Vector2( 67.8699, 24.1438 )
+
+[node name="Player2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 313, 90 )
+scale = Vector2( 0.35, 0.35 )
+
+[node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 6 )]
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Light2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 50.2104, 18.0536 )
+scale = Vector2( 0.0282422, 0.0399769 )
+shadow_enabled = false
+
+[node name="Light2D2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 99.5987, 43.0284 )
+scale = Vector2( 0.0274201, 0.0399769 )
+shadow_enabled = false
+
+[node name="Light2D3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 164.421, 43.5896 )
+scale = Vector2( 0.0282422, 0.0399769 )
+shadow_enabled = false
+
+[node name="Light2D4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 225.34, 57.3626 )
+scale = Vector2( 0.0282422, 0.0399769 )
+shadow_enabled = false
+
+[node name="Light2D5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 261.627, 46.5031 )
+scale = Vector2( 0.0137574, 0.0161804 )
+shadow_enabled = false
+
+[node name="Light2D6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 287.436, 19.2795 )
+scale = Vector2( 0.0137574, 0.0161804 )
+shadow_enabled = false
+
+[node name="FromPEToPasar" type="Area2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromPEToPasar"]
+position = Vector2( -22.2019, 94.8749 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="FromPEToPasar"]
+
+[node name="FadeIn" parent="FromPEToPasar/CanvasLayer" instance=ExtResource( 13 )]
+visible = false
+
+[node name="UI" parent="." instance=ExtResource( 15 )]
+
+[node name="PauseSCreen" parent="." instance=ExtResource( 14 )]
+
+[node name="FromPEToPerumahan2" type="Area2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromPEToPerumahan2"]
+position = Vector2( 336.963, 94.6234 )
+shape = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="FromPEToPerumahan2"]
+
+[node name="FadeIn" parent="FromPEToPerumahan2/CanvasLayer" instance=ExtResource( 13 )]
+visible = false
+[connection signal="body_entered" from="FromPEToPasar" to="FromPEToPasar" method="_on_FromPEToPasar_body_entered"]
+[connection signal="fade_finished" from="FromPEToPasar/CanvasLayer/FadeIn" to="FromPEToPasar" method="_on_FadeIn_fade_finished"]
+[connection signal="body_entered" from="FromPEToPerumahan2" to="FromPEToPerumahan2" method="_on_FromPEToPerumahan2_body_entered"]
+[connection signal="fade_finished" from="FromPEToPerumahan2/CanvasLayer/FadeIn" to="FromPEToPerumahan2" method="_on_FadeIn_fade_finished"]

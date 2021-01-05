@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
@@ -10,17 +10,16 @@
 [ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Layangan.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Level/ToPasar.gd" type="Script" id=10]
-[ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/KakekBukit.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Script/KakekBukit.gd" type="Script" id=14]
 [ext_resource path="res://Dialogue/Player_Kakek_Bukit.tscn" type="PackedScene" id=15]
-[ext_resource path="res://UI/KoinUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=16]
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Dialogue/Player_Kakek_Bukit2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Script/Koin3.gd" type="Script" id=19]
 [ext_resource path="res://World/Koin.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Script/KoinUI.gd" type="Script" id=21]
 [ext_resource path="res://Dialogue/Layangan_Diambil.tscn" type="PackedScene" id=22]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=24]
@@ -62,6 +61,11 @@ script = ExtResource( 10 )
 position = Vector2( 32.212, 185.321 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ToPasar"]
+
+[node name="FadeIn" parent="ToPasar/CanvasLayer" instance=ExtResource( 16 )]
+visible = false
 
 [node name="Bridge" parent="." instance=ExtResource( 4 )]
 position = Vector2( 256, 36.8142 )
@@ -298,7 +302,6 @@ scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 8 )]
 position = Vector2( -0.659027, 2.56253 )
-scale = Vector2( 1, 1 )
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="Gubuk" parent="YSort" instance=ExtResource( 5 )]
@@ -437,22 +440,12 @@ position = Vector2( 274.729, 48.8105 )
 position = Vector2( 312, 112 )
 script = ExtResource( 19 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MainanUI" parent="CanvasLayer" instance=ExtResource( 11 )]
-margin_top = -4.0
-margin_bottom = 11.0
-
-[node name="KoinUI" parent="CanvasLayer" instance=ExtResource( 16 )]
-margin_left = -90.0
-margin_top = -4.0
-margin_right = -10.0
-margin_bottom = 20.0
-script = ExtResource( 21 )
-
 [node name="PauseSCreen" parent="." instance=ExtResource( 17 )]
 
 [node name="Light2D" parent="." instance=ExtResource( 24 )]
-position = Vector2( 360, 85.3854 )
+position = Vector2( -56.4334, -29.667 )
 texture_scale = 3.0
+
+[node name="UI" parent="." instance=ExtResource( 11 )]
 [connection signal="body_entered" from="ToPasar" to="ToPasar" method="_on_ToPasar_body_entered"]
+[connection signal="fade_finished" from="ToPasar/CanvasLayer/FadeIn" to="ToPasar" method="_on_FadeIn_fade_finished"]

@@ -1,0 +1,266 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
+[ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/KakekBukit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Sumur.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/CameraPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Penjual.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Rumah.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Pagar.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World/Gubuk.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/Nenek.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World/Dina.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Level/FromPerumahan2ToPE.gd" type="Script" id=16]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=17]
+[ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=18]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=20]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.71136
+
+[node name="Perumahan2" type="Node2D"]
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 160.581, 89.668 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 141.846, 103.157, 657.076, 387.7 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 10, 3, 0, 11, 3, 1, 12, 3, 2, 14, 3, 0, 15, 3, 1, 16, 3, 1, 17, 3, 1, 18, 3, 1, 19, 3, 2, 65546, 3, 65536, 65547, 3, 65537, 65548, 3, 65538, 65550, 3, 65536, 65551, 3, 65537, 65552, 3, 65537, 65553, 3, 65537, 65554, 3, 65537, 65555, 3, 65538, 131082, 3, 65536, 131083, 3, 65537, 131084, 3, 65538, 131086, 3, 65536, 131087, 3, 65537, 131088, 3, 65537, 131089, 3, 65537, 131090, 3, 65537, 131091, 3, 65538, 196618, 3, 65536, 196619, 3, 65537, 196620, 3, 262149, 196621, 3, 196609, 196622, 3, 196614, 196623, 3, 131073, 196624, 3, 131073, 196625, 3, 131073, 196626, 3, 131073, 196627, 3, 131074, 262146, 3, 0, 262147, 3, 2, 262154, 3, 65536, 262155, 3, 65537, 262156, 3, 65538, 262157, 0, 0, 262159, 0, 0, 393215, 3, 0, 327680, 3, 1, 327681, 3, 1, 327682, 3, 131078, 327683, 3, 131077, 327684, 3, 1, 327685, 3, 1, 327686, 3, 1, 327687, 3, 1, 327688, 3, 1, 327689, 3, 1, 327690, 3, 131078, 327691, 3, 65537, 327692, 3, 65538, 458751, 3, 131072, 393216, 3, 131073, 393217, 3, 131073, 393218, 3, 65542, 393219, 3, 65541, 393220, 3, 131073, 393221, 3, 131073, 393222, 3, 131073, 393223, 3, 131073, 393224, 3, 131073, 393225, 3, 131073, 393226, 3, 131073, 393227, 3, 131073, 393228, 3, 131074, 458754, 3, 65536, 458755, 3, 65538, 458771, 0, 0, 524290, 3, 65536, 524291, 3, 65538, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 65537, 524326, 0, 65537, 524327, 0, 65537, 524328, 0, 65537, 524329, 0, 65537, 589826, 3, 65536, 589827, 3, 131077, 589828, 3, 1, 589829, 3, 1, 589830, 3, 1, 589831, 3, 1, 589832, 3, 1, 589833, 3, 1, 589834, 3, 1, 589835, 3, 1, 589836, 3, 1, 589837, 3, 1, 589838, 3, 1, 589839, 3, 1, 589840, 3, 1, 589841, 3, 1, 589842, 3, 1, 589843, 3, 2, 589852, 0, 0, 589853, 0, 0, 589855, 0, 0, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 65537, 589862, 0, 65537, 589863, 0, 65537, 589864, 0, 65537, 589865, 0, 65537, 655362, 3, 131072, 655363, 3, 131073, 655364, 3, 131073, 655365, 3, 131073, 655366, 3, 131073, 655367, 3, 131073, 655368, 3, 131073, 655369, 3, 131073, 655370, 3, 131073, 655371, 3, 131073, 655372, 3, 131073, 655373, 3, 131073, 655374, 3, 131073, 655375, 3, 131073, 655376, 3, 131073, 655377, 3, 131073, 655378, 3, 131073, 655379, 3, 131074, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 786453, 0, 0, 786454, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 983051, 0, 65537, 983052, 0, 65537, 983053, 0, 0, 1048588, 0, 65537, 1048589, 0, 0, 1048611, 0, 0, 1048612, 0, 0, 1048613, 0, 65537, 1048614, 0, 65537, 1048615, 0, 65537, 1048616, 0, 65537, 1048617, 0, 65537, 1114124, 0, 65537, 1114125, 0, 0, 1114148, 0, 0, 1114149, 0, 65537, 1114150, 0, 65537, 1114151, 0, 65537, 1114152, 0, 65537, 1114153, 0, 65537, 1179660, 0, 65537, 1179661, 0, 0, 1179662, 0, 0, 1245197, 0, 65537, 1245198, 0, 0 )
+
+[node name="CliffTileMap" parent="." instance=ExtResource( 15 )]
+tile_data = PoolIntArray( -1, 0, 4, -65536, 0, 196609, -65535, 0, 196609, -65534, 0, 196609, -65533, 0, 196609, -65532, 0, 196609, -65531, 0, 196609, -65530, 0, 196609, -65529, 0, 196609, -65528, 0, 196609, -65527, 0, 196609, -65526, 0, 7, 65535, 0, 65539, 10, 0, 65539, 131070, 0, 4, 131071, 0, 196615, 65546, 0, 65539, 196606, 0, 65539, 131082, 0, 65539, 262142, 0, 65539, 196618, 0, 65539, 327678, 0, 196612, 327679, 0, 7, 262154, 0, 65539, 393215, 0, 65539, 327690, 0, 65539, 458751, 0, 196612, 393216, 0, 196609, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 196609, 393226, 0, 196615 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="SUMUR" type="YSort" parent="YSort"]
+
+[node name="Sumur" parent="YSort/SUMUR" instance=ExtResource( 5 )]
+position = Vector2( 273.718, 22.0486 )
+
+[node name="Sumur3" parent="YSort/SUMUR" instance=ExtResource( 5 )]
+position = Vector2( 183.319, 20.1587 )
+
+[node name="Sumur2" parent="YSort/SUMUR" instance=ExtResource( 5 )]
+position = Vector2( 291.042, 163.475 )
+
+[node name="Rumah" type="YSort" parent="YSort"]
+
+[node name="Rumah" parent="YSort/Rumah" instance=ExtResource( 10 )]
+position = Vector2( 92.0693, 48.8126 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Rumah2" parent="YSort/Rumah" instance=ExtResource( 10 )]
+position = Vector2( 241.359, 122.61 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Gubuks" type="YSort" parent="YSort"]
+
+[node name="Gubuk" parent="YSort/Gubuks" instance=ExtResource( 12 )]
+position = Vector2( 241.123, 12.0208 )
+
+[node name="Gubuk2" parent="YSort/Gubuks" instance=ExtResource( 12 )]
+position = Vector2( 304.409, 10.9602 )
+
+[node name="Pohon" type="YSort" parent="YSort"]
+
+[node name="Pohon" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 9.82154, 50.7914 )
+
+[node name="Pohon2" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 145.639, 16.5563 )
+
+[node name="Pohon3" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 104.389, 17.3982 )
+
+[node name="Pohon4" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 51.6333, 17.3982 )
+
+[node name="Pohon5" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 80.5366, 129.364 )
+
+[node name="Pohon6" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 16.8369, 145.92 )
+
+[node name="Pohon7" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 16.8369, 167.527 )
+
+[node name="Pohon8" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 16.5563, 125.155 )
+
+[node name="Pohon9" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 129.644, 129.925 )
+
+[node name="Pohon10" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 232.069, 83.3428 )
+
+[node name="Pohon11" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 216.074, 29.7452 )
+
+[node name="Pohon12" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 288.473, 81.0979 )
+
+[node name="Pohon13" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 260.131, 99.6185 )
+
+[node name="Pohon14" parent="YSort/Pohon" instance=ExtResource( 7 )]
+position = Vector2( 312.886, 102.425 )
+
+[node name="Pagar" type="YSort" parent="YSort"]
+
+[node name="Pagar" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 7.296, 79.1336 )
+
+[node name="Pagar2" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 23.296, 79.1336 )
+
+[node name="Pagar3" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 120.95, 79.6948 )
+
+[node name="Pagar4" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 136.95, 79.6948 )
+
+[node name="Pagar5" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 144.95, 79.6948 )
+
+[node name="Pagar6" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 152.95, 79.6948 )
+
+[node name="Pagar7" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 205.95, 143.695 )
+
+[node name="Pagar8" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 185.95, 143.695 )
+
+[node name="Pagar9" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 166.95, 143.695 )
+
+[node name="Pagar10" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 147.95, 143.695 )
+
+[node name="Pagar11" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 127.95, 143.695 )
+
+[node name="Pagar12" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 108.95, 143.695 )
+
+[node name="Pagar13" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 88.9502, 143.695 )
+
+[node name="Pagar14" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 72.9502, 143.695 )
+
+[node name="Pagar15" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 271.345, 143.975 )
+
+[node name="Pagar16" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 287.345, 143.975 )
+
+[node name="Pagar17" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 303.345, 143.975 )
+
+[node name="Pagar18" parent="YSort/Pagar" instance=ExtResource( 11 )]
+position = Vector2( 311.345, 143.975 )
+
+[node name="Bush" type="YSort" parent="YSort"]
+
+[node name="Bushes" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 73.3904, 134.497 )
+
+[node name="Bushes2" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 85.3597, 134.182 )
+
+[node name="Bushes3" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 121.267, 133.867 )
+
+[node name="Bushes4" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 134.812, 133.552 )
+
+[node name="Bushes5" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 22.4655, 171.979 )
+
+[node name="Bushes7" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 12.585, 55.3048 )
+
+[node name="Bushes9" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 208.724, 35.1233 )
+
+[node name="Bushes10" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 220.917, 34.9131 )
+
+[node name="Bushes11" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 224.701, 88.5202 )
+
+[node name="Bushes12" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 236.684, 88.0998 )
+
+[node name="Bushes13" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 281.672, 85.7873 )
+
+[node name="Bushes14" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 293.655, 85.3669 )
+
+[node name="Bushes15" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 306.689, 107.23 )
+
+[node name="Bushes16" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 316.99, 106.599 )
+
+[node name="Bushes8" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 2.28402, 55.3048 )
+
+[node name="Bushes6" parent="YSort/Bush" instance=ExtResource( 3 )]
+position = Vector2( 11.1134, 172.189 )
+
+[node name="Dina" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 50.244, 76.7038 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="KakekBukit" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 241.706, 35.9735 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Nenek" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 302.356, 36.5681 )
+scale = Vector2( 0.75, 0.75 )
+script = null
+
+[node name="Penjual" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 194.467, 153.497 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Player2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 8.9797, 92.0419 )
+scale = Vector2( 0.35, 0.35 )
+
+[node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 6 )]
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="UI" parent="." instance=ExtResource( 19 )]
+
+[node name="PauseSCreen" parent="." instance=ExtResource( 18 )]
+
+[node name="FromPerumahan2ToPE" type="Area2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromPerumahan2ToPE"]
+position = Vector2( -12.9083, 95.1286 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="FromPerumahan2ToPE"]
+
+[node name="FadeIn" parent="FromPerumahan2ToPE/CanvasLayer" instance=ExtResource( 17 )]
+visible = false
+
+[node name="Light2D" parent="." instance=ExtResource( 20 )]
+position = Vector2( -86.9514, -18.5417 )
+[connection signal="body_entered" from="FromPerumahan2ToPE" to="FromPerumahan2ToPE" method="_on_FromPerumahan2ToPE_body_entered"]
+[connection signal="fade_finished" from="FromPerumahan2ToPE/CanvasLayer/FadeIn" to="FromPerumahan2ToPE" method="_on_FadeIn_fade_finished"]
