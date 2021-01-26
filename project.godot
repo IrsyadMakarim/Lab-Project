@@ -56,8 +56,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Testing"
-run/main_scene="res://Level/TitleScreen.tscn"
+config/name="Nostalgia"
+run/main_scene="res://UI/Startup.tscn"
 config/icon="res://icon.png"
 
 [autoload]

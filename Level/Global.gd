@@ -22,6 +22,7 @@ var koin4 = false
 var koin5 = false
 var isFinalDialogueDone = false
 var mom_final = false
+var mom_start = false
 var isDoorStart = false
 
 signal final_dialogue(value)

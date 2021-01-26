@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Kakek.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
-[ext_resource path="res://Level/Level2.gd" type="Script" id=6]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/RumahPasar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=9]
@@ -22,7 +21,6 @@ radius = 8.0
 height = 2.07991
 
 [node name="Level2" type="Node2D"]
-script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.28153, 0.260662 )

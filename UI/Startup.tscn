@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Effects/rpl-gdc.jpeg" type="Texture" id=2]
+[ext_resource path="res://Effects/black.png" type="Texture" id=3]
+[ext_resource path="res://UI/Startup.gd" type="Script" id=4]
+[ext_resource path="res://UI/FadeOut.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0823529, 0.0823529, 0.0745098, 1 ), Color( 0.0823529, 0.0823529, 0.0745098, 0 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( 159.979, 91.1138 )
+scale = Vector2( 1.02318, 1.13905 )
+texture = ExtResource( 3 )
+
+[node name="RPL-GDC" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 4 )
+
+[node name="FadeIn" parent="CanvasLayer" instance=ExtResource( 1 )]
+visible = false
+
+[node name="FadeOut" type="ColorRect" parent="CanvasLayer"]
+visible = false
+margin_right = 322.0
+margin_bottom = 179.0
+color = Color( 0.0823529, 0.0823529, 0.0745098, 0 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FadeOut"]
+anims/fade_out = SubResource( 1 )
+[connection signal="fade_finished" from="CanvasLayer/FadeIn" to="CanvasLayer" method="_on_FadeIn_fade_finished"]

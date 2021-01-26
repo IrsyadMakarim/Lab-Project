@@ -79,5 +79,8 @@ margin_bottom = 112.0
 
 [node name="FadeIn" parent="." instance=ExtResource( 3 )]
 visible = false
+margin_top = -2.0
+margin_right = 4.0
+margin_bottom = 2.0
 [connection signal="pressed" from="Menu/CenterRow/Buttons/ExitButton" to="Menu/CenterRow/Buttons/ExitButton" method="_on_ExitButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
