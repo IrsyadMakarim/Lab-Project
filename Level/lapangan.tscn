@@ -179,7 +179,7 @@ visible = false
 [node name="PauseSCreen" parent="." instance=ExtResource( 11 )]
 
 [node name="Light2D" parent="." instance=ExtResource( 22 )]
-position = Vector2( -69.2343, -74.1485 )
+position = Vector2( -69.6797, -74.1485 )
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
 [connection signal="body_entered" from="ToPerumahan" to="ToPerumahan" method="_on_ToPerumahan_body_entered"]

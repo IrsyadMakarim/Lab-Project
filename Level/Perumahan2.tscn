@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=2]
@@ -20,6 +20,20 @@
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=18]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Dialogue/Perumahan2_Dina1.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Dialogue/Perumahan2_Dina2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Script/Dina.gd" type="Script" id=23]
+[ext_resource path="res://Dialogue/NPC1.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Dialogue/NPC2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Script/Kakek_Rumah1.gd" type="Script" id=26]
+[ext_resource path="res://Script/Kakek_Rumah2.gd" type="Script" id=27]
+[ext_resource path="res://Script/Titan.gd" type="Script" id=28]
+[ext_resource path="res://Dialogue/Titan3.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Dialogue/Titan2.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Dialogue/Titan1.tscn" type="PackedScene" id=31]
+[ext_resource path="res://World/Tulupan.tscn" type="PackedScene" id=32]
+[ext_resource path="res://World/Koin.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Script/Koin6.gd" type="Script" id=34]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.71136
@@ -103,7 +117,7 @@ position = Vector2( 129.644, 129.925 )
 position = Vector2( 232.069, 83.3428 )
 
 [node name="Pohon11" parent="YSort/Pohon" instance=ExtResource( 7 )]
-position = Vector2( 216.074, 29.7452 )
+position = Vector2( 216.074, 36.113 )
 
 [node name="Pohon12" parent="YSort/Pohon" instance=ExtResource( 7 )]
 position = Vector2( 288.473, 81.0979 )
@@ -191,10 +205,10 @@ position = Vector2( 22.4655, 171.979 )
 position = Vector2( 12.585, 55.3048 )
 
 [node name="Bushes9" parent="YSort/Bush" instance=ExtResource( 3 )]
-position = Vector2( 208.724, 35.1233 )
+position = Vector2( 210.035, 46.7352 )
 
 [node name="Bushes10" parent="YSort/Bush" instance=ExtResource( 3 )]
-position = Vector2( 220.917, 34.9131 )
+position = Vector2( 222.041, 46.3377 )
 
 [node name="Bushes11" parent="YSort/Bush" instance=ExtResource( 3 )]
 position = Vector2( 224.701, 88.5202 )
@@ -223,19 +237,51 @@ position = Vector2( 11.1134, 172.189 )
 [node name="Dina" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 50.244, 76.7038 )
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 23 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Dina"]
+
+[node name="Dina1" parent="YSort/Dina/CanvasLayer" instance=ExtResource( 21 )]
+visible = false
+
+[node name="Dina2" parent="YSort/Dina/CanvasLayer" instance=ExtResource( 22 )]
+visible = false
 
 [node name="KakekBukit" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 241.706, 35.9735 )
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 26 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/KakekBukit"]
+
+[node name="NPC1" parent="YSort/KakekBukit/CanvasLayer" instance=ExtResource( 24 )]
+visible = false
 
 [node name="Nenek" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 302.356, 36.5681 )
 scale = Vector2( 0.75, 0.75 )
-script = null
+script = ExtResource( 27 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Nenek"]
+
+[node name="NPC2" parent="YSort/Nenek/CanvasLayer" instance=ExtResource( 25 )]
+visible = false
 
 [node name="Penjual" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 194.467, 153.497 )
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 28 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Penjual"]
+
+[node name="Titan1" parent="YSort/Penjual/CanvasLayer" instance=ExtResource( 31 )]
+visible = false
+
+[node name="Titan2" parent="YSort/Penjual/CanvasLayer" instance=ExtResource( 30 )]
+visible = false
+
+[node name="Titan3" parent="YSort/Penjual/CanvasLayer" instance=ExtResource( 29 )]
+visible = false
 
 [node name="Player2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 8.9797, 92.0419 )
@@ -243,6 +289,13 @@ scale = Vector2( 0.35, 0.35 )
 
 [node name="CameraPlayer" parent="YSort/Player2" instance=ExtResource( 6 )]
 zoom = Vector2( 0.5, 0.5 )
+
+[node name="Tulupan" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( 169.249, 8.21083 )
+
+[node name="Koin" parent="YSort" instance=ExtResource( 33 )]
+position = Vector2( 31.1038, 167.438 )
+script = ExtResource( 34 )
 
 [node name="UI" parent="." instance=ExtResource( 19 )]
 

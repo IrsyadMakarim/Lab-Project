@@ -8,7 +8,7 @@ onready var label = $Label
 func set_coin(value):
 	coin = clamp(value, 0, max_coin)
 	if label != null:
-		label.text = "Koin = "+ str(coin) + " / 5"
+		label.text = "Koin = "+ str(coin)
 
 func set_max_coin(value):
 	max_coin = max(value, 1)

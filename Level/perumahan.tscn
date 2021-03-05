@@ -222,8 +222,38 @@ position = Vector2( 222.773, 167.207 )
 [node name="Bushes42" parent="YSort/Daunan" instance=ExtResource( 5 )]
 position = Vector2( 222.738, 175.545 )
 
-[node name="Bushes43" parent="YSort/Daunan" instance=ExtResource( 5 )]
-position = Vector2( 223.026, 182.789 )
+[node name="Bushes50" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 222.525, 180.453 )
+
+[node name="Bushes51" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 234.205, 180.119 )
+
+[node name="Bushes52" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 245.885, 179.786 )
+
+[node name="Bushes53" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 257.064, 179.452 )
+
+[node name="Bushes54" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 262.404, 184.291 )
+
+[node name="Bushes55" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 262.237, 188.796 )
+
+[node name="Bushes56" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 262.07, 192.633 )
+
+[node name="Bushes57" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 219.522, 184.624 )
+
+[node name="Bushes58" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 219.522, 187.961 )
+
+[node name="Bushes59" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 219.522, 192.3 )
+
+[node name="Bushes60" parent="YSort/Daunan" instance=ExtResource( 5 )]
+position = Vector2( 219.522, 192.3 )
 
 [node name="Bushes44" parent="YSort/Daunan" instance=ExtResource( 5 )]
 position = Vector2( 195.262, 95.0208 )

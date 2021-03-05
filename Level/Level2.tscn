@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://World/DirtTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Pohon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Kakek.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Bushes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
+[ext_resource path="res://Dialogue/Kakek_StartArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/CliffTileMap.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/RumahPasar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/Player2.tscn" type="PackedScene" id=9]
@@ -15,6 +16,10 @@
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://UI/PauseSCreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Effects/Light2D.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Script/KakekStart.gd" type="Script" id=17]
+[ext_resource path="res://Dialogue/Kakek_StartArea2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://World/Koin.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Script/Koin7.gd" type="Script" id=20]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -136,6 +141,19 @@ position = Vector2( 113.597, 60.7062 )
 [node name="Kakek" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 145.67, 75.1833 )
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 17 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Kakek"]
+
+[node name="KakekStart1" parent="YSort/Kakek/CanvasLayer" instance=ExtResource( 6 )]
+visible = false
+
+[node name="KakekStart2" parent="YSort/Kakek/CanvasLayer" instance=ExtResource( 18 )]
+visible = false
+
+[node name="Koin" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 255.67, 70.9196 )
+script = ExtResource( 20 )
 
 [node name="UI" parent="." instance=ExtResource( 14 )]
 

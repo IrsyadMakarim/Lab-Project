@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Dialogue/DialogSystem.tscn" type="PackedScene" id=1]
+
+[node name="DialogSystem" instance=ExtResource( 1 )]
+dialog = [ "Kakek: Selamat datang kembali Andi!", "Andi: Iya makasih kek", "Kakek: Kamu ditunggu sama Ibu kamu, jangan lupa berbicara dengan dia ya!" ]

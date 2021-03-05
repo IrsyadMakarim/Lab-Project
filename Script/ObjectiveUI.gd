@@ -9,4 +9,4 @@ func set_objective():
 	if (Global.mom_start == false):
 		label.text = "Berbicara kepada Ibu"
 	elif (Global.mom_start == true):
-		label.text = "Carilah mainan-mainan anda"
+		label.text = "Carilah mainan-mainan anda (Hint: Bicara kepada tiap orang)"

@@ -5,7 +5,9 @@ func _process(delta):
 		$MainanUI.show()
 		$KoinUI.show()
 		$ObjectiveUI.show()
+		$ObjectiveUI2.show()
 	else:
 		$MainanUI.hide()
 		$KoinUI.hide()
 		$ObjectiveUI.hide()
+		$ObjectiveUI2.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/TabUI.gd" type="Script" id=1]
 [ext_resource path="res://Script/MainanUI.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://UI/ObjectiveUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/KoinUI.gd" type="Script" id=5]
 [ext_resource path="res://Script/ObjectiveUI.gd" type="Script" id=6]
+[ext_resource path="res://Script/ObjectiveUI2.gd" type="Script" id=7]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -17,10 +18,10 @@ margin_bottom = 11.0
 
 [node name="KoinUI" parent="." instance=ExtResource( 3 )]
 visible = false
-margin_left = -90.0
-margin_top = -4.0
-margin_right = -10.0
-margin_bottom = 20.0
+margin_left = -64.243
+margin_top = -3.64874
+margin_right = 0.756989
+margin_bottom = 20.3513
 script = ExtResource( 5 )
 
 [node name="ObjectiveUI" parent="." instance=ExtResource( 4 )]
@@ -30,3 +31,11 @@ margin_top = 31.0
 margin_right = 60.0
 margin_bottom = 45.0
 script = ExtResource( 6 )
+
+[node name="ObjectiveUI2" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = 1.0
+margin_top = 47.927
+margin_right = 60.0
+margin_bottom = 61.927
+script = ExtResource( 7 )

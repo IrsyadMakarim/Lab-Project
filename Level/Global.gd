@@ -20,10 +20,15 @@ var koin2 = false
 var koin3 = false
 var koin4 = false
 var koin5 = false
+var koin6 = false
+var koin7 = false
+var koin8 = false
+var koin9 = false
 var isFinalDialogueDone = false
 var mom_final = false
 var mom_start = false
 var isDoorStart = false
+var penjual_start = false
 
 signal final_dialogue(value)
 signal item_changed(value)

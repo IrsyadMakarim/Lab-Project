@@ -58,7 +58,7 @@ _global_script_class_icons={
 
 config/name="Nostalgia"
 run/main_scene="res://UI/Startup.tscn"
-config/icon="res://icon.png"
+config/icon="res://Title.png"
 
 [autoload]
 
@@ -153,3 +153,7 @@ tab={
 
 2d_physics/layer_1="default"
 2d_physics/layer_2="interactable"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"

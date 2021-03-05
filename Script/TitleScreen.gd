@@ -28,8 +28,13 @@ func reset():
 	Global.koin3 = false
 	Global.koin4 = false
 	Global.koin5 = false
+	Global.koin6 = false
+	Global.koin7 = false
+	Global.koin8 = false
 	Global.isFinalDialogueDone = false
 	Global.mom_final = false
+	Global.mom_start = false
+	Global.isDoorStart = false
 
 func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)

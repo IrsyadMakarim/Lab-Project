@@ -45,19 +45,19 @@ func _physics_process(delta):
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up") #MOVEMENT ATAS DAN BAWAH
 	input_vector = input_vector.normalized()
 	
-	if Input.is_action_just_pressed("cheat_button"):
-		Global.item = 5
-		Global.koin = 5
-		Global.IsBola = true
-		Global.IsKelereng = true
-		Global.IsLayangan = true
-		Global.IsTomogachi = true
-		Global.IsTulupan = true
-		Global.koin1 = true
-		Global.koin2 = true
-		Global.koin3 = true
-		Global.koin4 = true
-		Global.koin5 = true
+#	if Input.is_action_just_pressed("cheat_button"):
+#		Global.item = 5
+#		Global.koin = 5
+#		Global.IsBola = true
+#		Global.IsKelereng = true
+#		Global.IsLayangan = true
+#		Global.IsTomogachi = true
+#		Global.IsTulupan = true
+#		Global.koin1 = true
+#		Global.koin2 = true
+#		Global.koin3 = true
+#		Global.koin4 = true
+#		Global.koin5 = true
 	
 	if input_vector != Vector2.ZERO:
 		if Input.get_action_strength("down"):
